@@ -1374,25 +1374,23 @@
     /* ===== Footer ===== */
     .site-footer{
       margin: 72px 0 20px;
-      padding: 26px 28px;
+      padding: 30px 32px;
       display:flex;
       flex-direction:column;
-      gap: 18px;
+      gap: 22px;
     }
 
-    .footer-top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 2.2fr repeat(3, 1fr) 1.2fr;
       gap: 26px;
-      flex-wrap: wrap;
     }
 
     .footer-brand{
-      max-width: 320px;
+      max-width: 360px;
       display:flex;
       flex-direction:column;
-      gap: 10px;
+      gap: 14px;
     }
 
     .footer-title{
@@ -1408,19 +1406,90 @@
       margin: 0;
     }
 
-    .footer-nav{
+    .footer-icons{
       display:flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-weight: 700;
+      align-items:center;
+      gap: 10px;
     }
 
-    .footer-nav a{
+    .footer-icon{
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display:grid;
+      place-items:center;
+      color: #0b1c2a;
+      background: linear-gradient(135deg, #4aa8ff, #29c4ff);
+      border: 1px solid rgba(255,255,255,0.2);
+      text-decoration:none;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .footer-icon:nth-child(2){ background: linear-gradient(135deg, #38d2ff, #2b95ff); }
+    .footer-icon:nth-child(3){ background: linear-gradient(135deg, #3b7bff, #2851ff); }
+    .footer-icon:nth-child(4){ background: linear-gradient(135deg, #3fa6ff, #1da1ff); }
+
+    .footer-icon:hover{
+      transform: translateY(-2px);
+      border-color: rgba(184,255,0,0.6);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+      color: #071000;
+    }
+
+    .footer-heading{
+      font-weight: 800;
+      font-size: 16px;
+      margin: 0 0 10px;
+      letter-spacing: .2px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a{
       color: rgba(233,238,246,0.7);
       text-decoration:none;
+      font-weight: 650;
     }
 
-    .footer-nav a:hover{ color: var(--accent); }
+    .footer-links a:hover{ color: var(--accent); }
+
+    .footer-apps{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+
+    .footer-app-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight: 700;
+      text-decoration:none;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+
+    .footer-app-btn i{
+      font-size: 16px;
+    }
+
+    .footer-app-btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(184,255,0,0.55);
+    }
 
     .footer-bottom{
       display:flex;
@@ -1433,30 +1502,21 @@
       font-size: 14px;
     }
 
-    .footer-icons{
-      display:flex;
-      align-items:center;
-      gap: 12px;
+    @media (max-width: 1100px){
+      .footer-grid{
+        grid-template-columns: 1.6fr 1fr 1fr;
+        row-gap: 22px;
+      }
+
+      .footer-grid .footer-column.app-col{
+        grid-column: 1 / -1;
+      }
     }
 
-    .footer-icon{
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      display:grid;
-      place-items:center;
-      color: var(--text);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      text-decoration:none;
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-    }
-
-    .footer-icon:hover{
-      transform: translateY(-2px);
-      border-color: rgba(184,255,0,0.6);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
-      color: var(--accent);
+    @media (max-width: 720px){
+      .footer-grid{
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 520px){
@@ -2364,35 +2424,72 @@
     </section>
 
     <footer class="site-footer glass">
-      <div class="footer-top">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-title">Coin2 Mining</div>
-          <p class="footer-copy">Transparent mining insights, instant payouts, and a network built for long-term growth.</p>
+          <div class="footer-title">Coin Trade</div>
+          <p class="footer-copy">Canada's leading cryptocurrency trading platform. Trade with confidence, security, and speed.</p>
+          <div class="footer-icons" aria-label="Social links">
+            <a class="footer-icon" href="#" aria-label="Telegram">
+              <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="X">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="Discord">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="#">Plans</a>
-          <a href="#">Pricing</a>
-          <a href="#">Security</a>
-          <a href="#">Support</a>
-          <a href="#">Contact</a>
-        </nav>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Markets</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Compliance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column app-col">
+          <h3 class="footer-heading">Download App</h3>
+          <div class="footer-apps">
+            <a class="footer-app-btn" href="#" aria-label="Download on the App Store">
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              App Store
+            </a>
+            <a class="footer-app-btn" href="#" aria-label="Get it on Google Play">
+              <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+              Google Play
+            </a>
+          </div>
+        </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© 2026 Coin2 Mining. All rights reserved.</span>
-        <div class="footer-icons" aria-label="Social links">
-          <a class="footer-icon" href="#" aria-label="X">
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-          </a>
-          <a class="footer-icon" href="#" aria-label="Discord">
-            <i class="fa-brands fa-discord" aria-hidden="true"></i>
-          </a>
-          <a class="footer-icon" href="#" aria-label="Telegram">
-            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
-          </a>
-          <a class="footer-icon" href="#" aria-label="GitHub">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-        </div>
+        <span>© 2026 Coin Trade. All rights reserved.</span>
+        <span>Built for fast, secure, and compliant crypto trading.</span>
       </div>
     </footer>
   </div>
