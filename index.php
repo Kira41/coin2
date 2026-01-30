@@ -1090,6 +1090,144 @@
     }
 
   
+    /* ===== Client testimonials ===== */
+    .testimonials{
+      margin-top: 56px;
+    }
+
+    .testimonialsHeader{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 16px;
+      margin: 0 0 18px;
+    }
+
+    .testimonialControls{
+      display:flex;
+      gap: 10px;
+    }
+
+    .testimonialBtn{
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--accent);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    }
+
+    .testimonialBtn:active{ transform: translateY(1px); }
+
+    .testimonialSlider{
+      position:relative;
+      overflow:hidden;
+      border-radius: 18px;
+      min-height: 260px;
+    }
+
+    .testimonialSlide{
+      position:absolute;
+      inset:0;
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+      transition: opacity .35s ease, transform .35s ease;
+      pointer-events:none;
+    }
+
+    .testimonialSlide.is-active{
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events:auto;
+    }
+
+    .testimonialCard{
+      height:100%;
+      padding: 24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap: 18px;
+    }
+
+    .testimonialStars{
+      display:flex;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .testimonialQuote{
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(233,238,246,0.90);
+      margin: 0;
+    }
+
+    .testimonialPerson{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+
+    .testimonialAvatar{
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(184,255,0,0.70);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    .testimonialName{
+      font-weight: 900;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .testimonialRole{
+      color: rgba(233,238,246,0.65);
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .testimonialDots{
+      margin-top: 14px;
+      display:flex;
+      gap: 8px;
+      justify-content:center;
+    }
+
+    .testimonialDot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,0.22);
+      cursor:pointer;
+    }
+
+    .testimonialDot.is-active{
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(184,255,0,0.15);
+    }
+
+    @media (max-width: 1050px){
+      .testimonialsHeader{ align-items:flex-start; flex-direction:column; }
+    }
+
+    @media (max-width: 520px){
+      .testimonialSlider{ min-height: 310px; }
+      .testimonialQuote{ font-size: 16px; }
+      .testimonialBtn{ width: 42px; height: 42px; }
+    }
+
+  
     /* ===== Affiliate infographic (flat 2D) ===== */
     .affiliate{ margin-top: 64px; }
 
@@ -2065,6 +2203,105 @@
       </div>
     </section>
 
+    <!-- Client testimonials -->
+    <section class="testimonials" aria-label="Client feedback">
+      <div class="testimonialsHeader">
+        <h2 class="statsTitle"><span class="w">Client</span> <span class="s">feedback</span></h2>
+        <div class="testimonialControls" aria-label="Testimonial navigation">
+          <button class="testimonialBtn" type="button" data-dir="prev" aria-label="Previous testimonial">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button class="testimonialBtn" type="button" data-dir="next" aria-label="Next testimonial">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="testimonialSlider glass" id="testimonialSlider" aria-live="polite">
+        <article class="testimonialSlide is-active" data-index="0" aria-label="Testimonial 1 of 4">
+          <div class="testimonialCard">
+            <div class="testimonialStars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonialQuote">“Reliable payouts and clear analytics. The profit simulator matches our live results almost perfectly.”</p>
+            <div class="testimonialPerson">
+              <img class="testimonialAvatar" src="img/avatar/12.jpg" alt="Client avatar of Lila Gardner" loading="lazy" decoding="async" />
+              <div>
+                <div class="testimonialName">Lila Gardner</div>
+                <div class="testimonialRole">Mining operations lead</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonialSlide" data-index="1" aria-label="Testimonial 2 of 4">
+          <div class="testimonialCard">
+            <div class="testimonialStars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonialQuote">“Setup was instant, and the UI makes it easy to forecast every dollar. Our team trusts the insights.”</p>
+            <div class="testimonialPerson">
+              <img class="testimonialAvatar" src="img/avatar/23.jpg" alt="Client avatar of Oscar Briggs" loading="lazy" decoding="async" />
+              <div>
+                <div class="testimonialName">Oscar Briggs</div>
+                <div class="testimonialRole">Portfolio strategist</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonialSlide" data-index="2" aria-label="Testimonial 3 of 4">
+          <div class="testimonialCard">
+            <div class="testimonialStars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonialQuote">“The profitability ladder helps our clients pick the right plan. Support responds fast and stays on top.”</p>
+            <div class="testimonialPerson">
+              <img class="testimonialAvatar" src="img/avatar/34.jpg" alt="Client avatar of Priya Nair" loading="lazy" decoding="async" />
+              <div>
+                <div class="testimonialName">Priya Nair</div>
+                <div class="testimonialRole">Client success manager</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonialSlide" data-index="3" aria-label="Testimonial 4 of 4">
+          <div class="testimonialCard">
+            <div class="testimonialStars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonialQuote">“We’ve seen steady growth every month. The dashboard keeps our investors confident.”</p>
+            <div class="testimonialPerson">
+              <img class="testimonialAvatar" src="img/avatar/46.png" alt="Client avatar of Mateo Ruiz" loading="lazy" decoding="async" />
+              <div>
+                <div class="testimonialName">Mateo Ruiz</div>
+                <div class="testimonialRole">Growth analyst</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonialDots" id="testimonialDots" aria-label="Testimonial slides"></div>
+    </section>
+
     <!-- Latest deposits / withdrawals section (like screenshot) -->
     <section class="latest" aria-label="Latest deposits and withdrawals">
       <div class="latestGrid">
@@ -2765,6 +3002,85 @@
       }
     }
 
+    // ===== Testimonials slider =====
+    function initTestimonials(){
+      const slider = document.getElementById("testimonialSlider");
+      if (!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll(".testimonialSlide"));
+      const dotsWrap = document.getElementById("testimonialDots");
+      const buttons = Array.from(document.querySelectorAll(".testimonialBtn"));
+
+      if (!slides.length || !dotsWrap) return;
+
+      let index = 0;
+      let timer = null;
+      const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+      const dots = slides.map((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "testimonialDot";
+        dot.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
+        dot.addEventListener("click", () => {
+          setSlide(i);
+          restartTimer();
+        });
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+
+      function setSlide(nextIndex){
+        index = (nextIndex + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("is-active", i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("is-active", i === index);
+        });
+      }
+
+      function step(dir){
+        setSlide(index + dir);
+      }
+
+      function stopTimer(){
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function startTimer(){
+        if (prefersReduced) return;
+        stopTimer();
+        timer = setInterval(() => {
+          step(1);
+        }, 7000);
+      }
+
+      function restartTimer(){
+        stopTimer();
+        startTimer();
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const dir = btn.getAttribute("data-dir") === "prev" ? -1 : 1;
+          step(dir);
+          restartTimer();
+        });
+      });
+
+      slider.addEventListener("mouseenter", stopTimer);
+      slider.addEventListener("mouseleave", startTimer);
+      slider.addEventListener("focusin", stopTimer);
+      slider.addEventListener("focusout", startTimer);
+
+      setSlide(0);
+      startTimer();
+    }
+
     // ===== Demo calculator (replace with your logic) =====
     const COIN_USD = {
       BTC: 89500,
@@ -2982,6 +3298,7 @@
     recalc();
     renderMarketingTables();
     renderLatestTables();
+    initTestimonials();
 
     // ===== Affiliate canvas animation: steps 1-3 =====
     function initAffiliateCanvas(){
