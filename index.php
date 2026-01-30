@@ -1371,6 +1371,99 @@
       .affStep.s3{ left: 64%; }
     }
 
+    /* ===== Footer ===== */
+    .site-footer{
+      margin: 72px 0 20px;
+      padding: 26px 28px;
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+    }
+
+    .footer-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand{
+      max-width: 320px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+
+    .footer-title{
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: .2px;
+    }
+
+    .footer-copy{
+      color: rgba(233,238,246,0.65);
+      font-weight: 650;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .footer-nav{
+      display:flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-weight: 700;
+    }
+
+    .footer-nav a{
+      color: rgba(233,238,246,0.7);
+      text-decoration:none;
+    }
+
+    .footer-nav a:hover{ color: var(--accent); }
+
+    .footer-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: rgba(233,238,246,0.6);
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    .footer-icons{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+    }
+
+    .footer-icon{
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      display:grid;
+      place-items:center;
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      text-decoration:none;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .footer-icon:hover{
+      transform: translateY(-2px);
+      border-color: rgba(184,255,0,0.6);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+      color: var(--accent);
+    }
+
+    @media (max-width: 520px){
+      .site-footer{ padding: 22px 20px; }
+      .footer-bottom{ flex-direction:column; align-items:flex-start; }
+    }
+
   
     /* ===== Hero (top) ===== */
     .hero{
@@ -2269,6 +2362,39 @@
         </div>
       </div>
     </section>
+
+    <footer class="site-footer glass">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-title">Coin2 Mining</div>
+          <p class="footer-copy">Transparent mining insights, instant payouts, and a network built for long-term growth.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">Plans</a>
+          <a href="#">Pricing</a>
+          <a href="#">Security</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Coin2 Mining. All rights reserved.</span>
+        <div class="footer-icons" aria-label="Social links">
+          <a class="footer-icon" href="#" aria-label="X">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a class="footer-icon" href="#" aria-label="Discord">
+            <i class="fa-brands fa-discord" aria-hidden="true"></i>
+          </a>
+          <a class="footer-icon" href="#" aria-label="Telegram">
+            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+          </a>
+          <a class="footer-icon" href="#" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script>
