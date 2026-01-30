@@ -1147,46 +1147,56 @@
       min-height: 340px;
     }
 
-    .affSvg{
+    .affCanvas{
       position:absolute;
       inset:0;
       width:100%;
       height:100%;
-      opacity: 1;
       pointer-events:none;
     }
 
-    .affSvg path{
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      vector-effect: non-scaling-stroke;
+    .affStep{
+      position:absolute;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      max-width: 240px;
     }
 
-    .affNode{
-      position:absolute;
+    .affStepBadge{
       width: 88px;
       height: 88px;
-      border-radius: 24px; /* squircle */
+      border-radius: 24px;
       background: var(--lime);
       border: 1px solid rgba(184,254,8,0.55);
       display:grid;
       place-items:center;
       color:#071000;
       font-weight: 1000;
-      font-size: 36px;
+      font-size: 34px;
       letter-spacing: .2px;
       box-shadow:
         0 22px 50px rgba(0,0,0,0.45),
         0 0 26px rgba(184,254,8,0.18);
+      position:relative;
+      overflow:hidden;
     }
 
-    .affNode.n1{ left: 14%; top: 60%; }
-    .affNode.n2{ left: 47%; top: 44%; }
-    .affNode.n3{ left: 78%; top: 22%; }
+    .affStepBadge span{
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      color: rgba(7,16,0,0.75);
+      position:absolute;
+      bottom: 12px;
+    }
+
+    .affStep.s1{ left: 14%; top: 58%; }
+    .affStep.s2{ left: 47%; top: 40%; }
+    .affStep.s3{ left: 78%; top: 18%; }
 
     .affMeta{
-      position:absolute;
-      max-width: 240px;
       color: rgba(233,238,246,0.72);
       font-weight: 750;
       font-size: 15px;
@@ -1200,11 +1210,6 @@
       font-size: 16px;
       margin-bottom: 6px;
     }
-
-    /* per-node label placement */
-    .affMeta.m1{ left: 14%; top: 78%; }
-    .affMeta.m2{ left: 45%; top: 10%; }
-    .affMeta.m3{ left: 70%; top: 46%; }
 
     .affRight{ min-width: 0; }
 
@@ -1256,11 +1261,11 @@
 
     @media (max-width: 520px){
       .affLeft{ padding: 14px; }
-      .affNode{ width: 78px; height: 78px; border-radius: 24px; font-size: 32px; }
+      .affStepBadge{ width: 78px; height: 78px; border-radius: 24px; font-size: 30px; }
       .affMeta{ font-size: 14px; }
       .affMeta .lvl{ font-size: 15px; }
-      .affMeta.m2{ left: 34%; }
-      .affMeta.m3{ left: 64%; }
+      .affStep.s2{ left: 34%; }
+      .affStep.s3{ left: 64%; }
     }
 
   
@@ -2104,43 +2109,31 @@
       </div>
       <div class="affGrid">
         <div class="affLeft glass">
-          <div class="affGraph" aria-label="Affiliate levels and rewards">
-            <svg class="affSvg" id="affSvg" viewBox="0 0 1 1" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="affLine" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#B8FE08" stop-opacity="0.42" />
-                  <stop offset="60%" stop-color="#B8FE08" stop-opacity="0.92" />
-                  <stop offset="82%" stop-color="#B8FE08" stop-opacity="0.30" />
-                  <stop offset="100%" stop-color="#B8FE08" stop-opacity="0.00" />
-                </linearGradient>
-              </defs>
+          <div class="affGraph" aria-label="Affiliate steps and rewards">
+            <canvas class="affCanvas" id="affCanvas" aria-hidden="true"></canvas>
 
-              <!-- JS sets d so the line always hits circle centers -->
-              <path id="affPathGlow" d="" fill="none" stroke="#B8FE08" stroke-opacity="0.10" stroke-width="4.5" />
-              <path id="affPath" d="" fill="none" stroke="url(#affLine)" stroke-width="2" />
-
-              <!-- thinner fading tail (JS uses dash to show only the end) -->
-              <path id="affPathTailGlow" d="" fill="none" stroke="#B8FE08" stroke-opacity="0.10" stroke-width="3.2" />
-              <path id="affPathTail" d="" fill="none" stroke="url(#affLine)" stroke-width="1.25" />
-            </svg>
-
-            <div class="affNode n1">1%</div>
-            <div class="affNode n2">3%</div>
-            <div class="affNode n3">5%</div>
-
-            <div class="affMeta m1">
-              <div class="lvl">3 Level</div>
-              <div>From the purchased power<br/>by level 3 referrals</div>
+            <div class="affStep s1">
+              <div class="affStepBadge">1<span>1% bonus</span></div>
+              <div class="affMeta">
+                <div class="lvl">Step 1</div>
+                <div>Share your link and invite friends to get your first rewards.</div>
+              </div>
             </div>
 
-            <div class="affMeta m2">
-              <div class="lvl">2 Level</div>
-              <div>From the purchased<br/>power by level 2<br/>referrals</div>
+            <div class="affStep s2">
+              <div class="affStepBadge">2<span>3% bonus</span></div>
+              <div class="affMeta">
+                <div class="lvl">Step 2</div>
+                <div>Earn more when your friends activate their mining power.</div>
+              </div>
             </div>
 
-            <div class="affMeta m3">
-              <div class="lvl">1 Level</div>
-              <div>From the purchased power<br/>by level 1 referrals</div>
+            <div class="affStep s3">
+              <div class="affStepBadge">3<span>5% bonus</span></div>
+              <div class="affMeta">
+                <div class="lvl">Step 3</div>
+                <div>Grow your network and keep collecting higher tier rewards.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -2990,131 +2983,129 @@
     renderMarketingTables();
     renderLatestTables();
 
-    // ===== Affiliate curve: keep line thin, smooth, and connected to circles =====
-    function affCatmullRomPath(points){
-      if (!Array.isArray(points) || points.length < 2) return "";
+    // ===== Affiliate canvas animation: steps 1-3 =====
+    function initAffiliateCanvas(){
+      const graph = document.querySelector(".affGraph");
+      const canvas = document.getElementById("affCanvas");
+      const steps = Array.from(document.querySelectorAll(".affStep"));
+      if (!graph || !canvas || steps.length < 3) return;
 
-      const f = (n) => Number(n).toFixed(2);
-      let d = `M ${f(points[0].x)} ${f(points[0].y)}`;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-      for (let i = 0; i < points.length - 1; i++) {
-        const p0 = points[i - 1] ?? points[i];
-        const p1 = points[i];
-        const p2 = points[i + 1];
-        const p3 = points[i + 2] ?? p2;
+      let points = [];
+      let width = 0;
+      let height = 0;
+      let rafId = 0;
+      const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-        const cp1x = p1.x + (p2.x - p0.x) / 6;
-        const cp1y = p1.y + (p2.y - p0.y) / 6;
-        const cp2x = p2.x - (p3.x - p1.x) / 6;
-        const cp2y = p2.y - (p3.y - p1.y) / 6;
+      function syncPoints(){
+        const rect = graph.getBoundingClientRect();
+        width = Math.max(1, rect.width);
+        height = Math.max(1, rect.height);
+        const dpr = window.devicePixelRatio || 1;
 
-        d += ` C ${f(cp1x)} ${f(cp1y)} ${f(cp2x)} ${f(cp2y)} ${f(p2.x)} ${f(p2.y)}`;
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        points = steps.map((step) => {
+          const badge = step.querySelector(".affStepBadge");
+          const bRect = (badge || step).getBoundingClientRect();
+          return {
+            x: bRect.left - rect.left + bRect.width / 2,
+            y: bRect.top - rect.top + bRect.height / 2,
+            r: bRect.width / 2,
+          };
+        });
       }
 
-      return d;
+      function drawCurve(time){
+        ctx.clearRect(0, 0, width, height);
+        if (points.length < 2) return;
+
+        const gradient = ctx.createLinearGradient(points[0].x, points[0].y, points[points.length - 1].x, points[points.length - 1].y);
+        gradient.addColorStop(0, "rgba(184,254,8,0.25)");
+        gradient.addColorStop(0.5, "rgba(184,254,8,0.9)");
+        gradient.addColorStop(1, "rgba(184,254,8,0.05)");
+
+        ctx.save();
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+
+        const dashOffset = prefersReduced ? 0 : -(time * 0.06);
+        ctx.strokeStyle = "rgba(184,254,8,0.15)";
+        ctx.lineWidth = 8;
+        ctx.setLineDash([]);
+        drawSmoothPath(points);
+        ctx.stroke();
+
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 2.2;
+        ctx.setLineDash([22, 14]);
+        ctx.lineDashOffset = dashOffset;
+        drawSmoothPath(points);
+        ctx.stroke();
+
+        if (!prefersReduced) {
+          points.forEach((pt, idx) => {
+            const pulse = (Math.sin(time / 400 + idx) + 1) * 0.5;
+            ctx.beginPath();
+            ctx.arc(pt.x, pt.y, pt.r + 12 + pulse * 6, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(184,254,8,${0.08 + pulse * 0.08})`;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          });
+        }
+
+        ctx.restore();
+      }
+
+      function drawSmoothPath(pts){
+        ctx.beginPath();
+        ctx.moveTo(pts[0].x, pts[0].y);
+        for (let i = 0; i < pts.length - 1; i++) {
+          const p1 = pts[i];
+          const p2 = pts[i + 1];
+          const midX = (p1.x + p2.x) / 2;
+          const midY = (p1.y + p2.y) / 2;
+          ctx.quadraticCurveTo(p1.x, p1.y, midX, midY);
+        }
+        const last = pts[pts.length - 1];
+        ctx.lineTo(last.x, last.y);
+      }
+
+      function animate(time){
+        drawCurve(time);
+        if (!prefersReduced) {
+          rafId = window.requestAnimationFrame(animate);
+        }
+      }
+
+      function handleResize(){
+        syncPoints();
+        drawCurve(performance.now());
+      }
+
+      syncPoints();
+      drawCurve(performance.now());
+      if (!prefersReduced) {
+        rafId = window.requestAnimationFrame(animate);
+      }
+
+      window.addEventListener("resize", handleResize, { passive: true });
+      window.addEventListener("orientationchange", handleResize, { passive: true });
+
+      return () => {
+        window.cancelAnimationFrame(rafId);
+        window.removeEventListener("resize", handleResize);
+        window.removeEventListener("orientationchange", handleResize);
+      };
     }
 
-    function updateAffiliateCurve(){
-      const graph = document.querySelector(".affGraph");
-      const svg = document.getElementById("affSvg");
-      const path = document.getElementById("affPath");
-      const glow = document.getElementById("affPathGlow");
-      const tail = document.getElementById("affPathTail");
-      const tailGlow = document.getElementById("affPathTailGlow");
-      if (!graph || !svg || !path || !glow || !tail || !tailGlow) return;
-
-      const nodes = [
-        graph.querySelector(".affNode.n1"),
-        graph.querySelector(".affNode.n2"),
-        graph.querySelector(".affNode.n3"),
-      ];
-      if (nodes.some((n) => !n)) return;
-
-      const gRect = graph.getBoundingClientRect();
-      const points = nodes.map((n) => {
-        const r = n.getBoundingClientRect();
-        return {
-          x: r.left - gRect.left + r.width / 2,
-          y: r.top - gRect.top + r.height / 2,
-        };
-      });
-
-      const w = Math.max(1, gRect.width);
-      const h = Math.max(1, gRect.height);
-      const padX = w * 0.10;
-      const padY = h * 0.08;
-      svg.setAttribute("viewBox", `${-padX} ${-padY} ${w + padX * 2} ${h + padY * 2}`);
-
-      const start = {
-        x: -padX,
-        y: Math.min(h + padY, points[0].y + h * 0.18),
-      };
-
-      const end = {
-        x: w + padX,
-        y: Math.max(-padY, points[points.length - 1].y - h * 0.22),
-      };
-
-      const amp = h * 0.14;
-
-      const lerp = (a, b, t) => ({
-        x: a.x + (b.x - a.x) * t,
-        y: a.y + (b.y - a.y) * t,
-      });
-
-      const wiggle = (a, b, t, dy) => {
-        const p = lerp(a, b, t);
-        return { x: p.x, y: p.y + dy };
-      };
-
-      const p1 = points[0];
-      const p2 = points[1];
-      const p3 = points[2];
-
-      // More twists: extra control points between nodes (still passes through nodes).
-      const curvePts = [
-        start,
-        wiggle(start, p1, 0.58, -amp * 0.35),
-        p1,
-        wiggle(p1, p2, 0.30, +amp * 0.55),
-        wiggle(p1, p2, 0.70, -amp * 0.45),
-        p2,
-        wiggle(p2, p3, 0.32, -amp * 0.60),
-        wiggle(p2, p3, 0.72, +amp * 0.48),
-        p3,
-        wiggle(p3, end, 0.52, -amp * 0.30),
-        end,
-      ];
-
-      const d = affCatmullRomPath(curvePts);
-      path.setAttribute("d", d);
-      glow.setAttribute("d", d);
-      tail.setAttribute("d", d);
-      tailGlow.setAttribute("d", d);
-
-      // taper + fade: show only the last part of the curve with thinner strokes
-      const len = Math.max(1, path.getTotalLength());
-      const tailPortion = 0.38; // last 38%
-      const tailLen = len * tailPortion;
-      const offset = -(len - tailLen);
-
-      tail.style.strokeDasharray = `${tailLen} ${len}`;
-      tail.style.strokeDashoffset = `${offset}`;
-      tailGlow.style.strokeDasharray = `${tailLen} ${len}`;
-      tailGlow.style.strokeDashoffset = `${offset}`;
-    }
-
-    let affResizeTimer = null;
-    window.addEventListener(
-      "resize",
-      () => {
-        window.clearTimeout(affResizeTimer);
-        affResizeTimer = window.setTimeout(updateAffiliateCurve, 120);
-      },
-      { passive: true }
-    );
-
-    requestAnimationFrame(updateAffiliateCurve);
+    initAffiliateCanvas();
 
     function initDailyUserAvatars(){
       const avatars = Array.from(document.querySelectorAll(".userChip .avatar"));
