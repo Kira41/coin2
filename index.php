@@ -1448,34 +1448,40 @@
 
     .userChip{
       border-radius: 999px;
-      padding: 19px 20px;
-      display:flex;
+      padding: 16px 18px;
+      display:inline-flex;
       align-items:center;
-      gap: 18px;
+      gap: 16px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.10);
       backdrop-filter: var(--blur);
       -webkit-backdrop-filter: var(--blur);
-      min-width: 720px;
+      width: fit-content;
+      max-width: 100%;
     }
 
     .avatars{
       display:flex;
       align-items:center;
-      margin-left: 16px;
+      padding-left: 6px;
+      flex: 0 0 auto;
     }
 
     .avatar{
-      width: 52px;
-      height: 52px;
-      border-radius: 999px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
       border: 2px solid rgba(0,0,0,0.40);
       background: rgba(255,255,255,0.10);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-      margin-left: -25px;
+      margin-left: 0;
+    }
+
+    .avatar + .avatar{
+      margin-left: -18px;
     }
 
     .userStat{
@@ -1665,7 +1671,7 @@
       .heroMain{ grid-template-columns: 1fr; }
       .heroLeft{ margin-left: 0; max-width: 100%; }
       .heroArt{ min-height: 420px; }
-      .userChip{ min-width: 0; width: 100%; }
+      .userChip{ max-width: 100%; flex-wrap: wrap; }
       .ctaCombo{ width: 100%; max-width: 100%; }
       .ctaComboInfo{ flex: 1 1 auto; min-width: 0; }
     }
