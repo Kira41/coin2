@@ -1123,26 +1123,11 @@
 
     .testimonialBtn:active{ transform: translateY(1px); }
 
-    .testimonialSlider{
-      position:relative;
-      overflow:hidden;
-      border-radius: 18px;
-      min-height: 260px;
-    }
-
-    .testimonialSlide{
-      position:absolute;
-      inset:0;
-      opacity: 0;
-      transform: translateY(12px) scale(0.98);
-      transition: opacity .35s ease, transform .35s ease;
-      pointer-events:none;
-    }
-
-    .testimonialSlide.is-active{
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events:auto;
+    .testimonialGrid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: 24px;
     }
 
     .testimonialCard{
@@ -1196,33 +1181,12 @@
       margin-top: 2px;
     }
 
-    .testimonialDots{
-      margin-top: 14px;
-      display:flex;
-      gap: 8px;
-      justify-content:center;
-    }
-
-    .testimonialDot{
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      border: 0;
-      background: rgba(255,255,255,0.22);
-      cursor:pointer;
-    }
-
-    .testimonialDot.is-active{
-      background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(184,255,0,0.15);
-    }
-
     @media (max-width: 1050px){
       .testimonialsHeader{ align-items:flex-start; flex-direction:column; }
+      .testimonialGrid{ grid-template-columns: 1fr; }
     }
 
     @media (max-width: 520px){
-      .testimonialSlider{ min-height: 310px; }
       .testimonialQuote{ font-size: 16px; }
       .testimonialBtn{ width: 42px; height: 42px; }
     }
@@ -2217,89 +2181,7 @@
         </div>
       </div>
 
-      <div class="testimonialSlider glass" id="testimonialSlider" aria-live="polite">
-        <article class="testimonialSlide is-active" data-index="0" aria-label="Testimonial 1 of 4">
-          <div class="testimonialCard">
-            <div class="testimonialStars" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonialQuote">“Reliable payouts and clear analytics. The profit simulator matches our live results almost perfectly.”</p>
-            <div class="testimonialPerson">
-              <img class="testimonialAvatar" src="img/avatar/12.jpg" alt="Client avatar of Lila Gardner" loading="lazy" decoding="async" />
-              <div>
-                <div class="testimonialName">Lila Gardner</div>
-                <div class="testimonialRole">Mining operations lead</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonialSlide" data-index="1" aria-label="Testimonial 2 of 4">
-          <div class="testimonialCard">
-            <div class="testimonialStars" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonialQuote">“Setup was instant, and the UI makes it easy to forecast every dollar. Our team trusts the insights.”</p>
-            <div class="testimonialPerson">
-              <img class="testimonialAvatar" src="img/avatar/23.jpg" alt="Client avatar of Oscar Briggs" loading="lazy" decoding="async" />
-              <div>
-                <div class="testimonialName">Oscar Briggs</div>
-                <div class="testimonialRole">Portfolio strategist</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonialSlide" data-index="2" aria-label="Testimonial 3 of 4">
-          <div class="testimonialCard">
-            <div class="testimonialStars" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonialQuote">“The profitability ladder helps our clients pick the right plan. Support responds fast and stays on top.”</p>
-            <div class="testimonialPerson">
-              <img class="testimonialAvatar" src="img/avatar/34.jpg" alt="Client avatar of Priya Nair" loading="lazy" decoding="async" />
-              <div>
-                <div class="testimonialName">Priya Nair</div>
-                <div class="testimonialRole">Client success manager</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonialSlide" data-index="3" aria-label="Testimonial 4 of 4">
-          <div class="testimonialCard">
-            <div class="testimonialStars" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonialQuote">“We’ve seen steady growth every month. The dashboard keeps our investors confident.”</p>
-            <div class="testimonialPerson">
-              <img class="testimonialAvatar" src="img/avatar/46.png" alt="Client avatar of Mateo Ruiz" loading="lazy" decoding="async" />
-              <div>
-                <div class="testimonialName">Mateo Ruiz</div>
-                <div class="testimonialRole">Growth analyst</div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="testimonialDots" id="testimonialDots" aria-label="Testimonial slides"></div>
+      <div class="testimonialGrid glass" id="testimonialGrid" aria-live="polite"></div>
     </section>
 
     <!-- Latest deposits / withdrawals section (like screenshot) -->
@@ -3002,46 +2884,129 @@
       }
     }
 
-    // ===== Testimonials slider =====
+    // ===== Testimonials grid (random 4 by 4) =====
+    const testimonialData = [
+      {
+        quote: "Reliable payouts and clear analytics. The profit simulator matches our live results almost perfectly.",
+        name: "Lila Gardner",
+        role: "Mining operations lead",
+        avatar: "img/avatar/12.jpg",
+      },
+      {
+        quote: "Setup was instant, and the UI makes it easy to forecast every dollar. Our team trusts the insights.",
+        name: "Oscar Briggs",
+        role: "Portfolio strategist",
+        avatar: "img/avatar/23.jpg",
+      },
+      {
+        quote: "The profitability ladder helps our clients pick the right plan. Support responds fast and stays on top.",
+        name: "Priya Nair",
+        role: "Client success manager",
+        avatar: "img/avatar/34.jpg",
+      },
+      {
+        quote: "We’ve seen steady growth every month. The dashboard keeps our investors confident.",
+        name: "Mateo Ruiz",
+        role: "Growth analyst",
+        avatar: "img/avatar/46.png",
+      },
+      {
+        quote: "Instant insights into daily yield made our onboarding smoother than any other platform.",
+        name: "Claire Okafor",
+        role: "Operations director",
+        avatar: "img/avatar/7.jpg",
+      },
+      {
+        quote: "Predictive ROI with real-time updates is exactly what our treasury team needed.",
+        name: "Jordan Wells",
+        role: "Treasury manager",
+        avatar: "img/avatar/18.jpg",
+      },
+      {
+        quote: "The dashboard is clean, fast, and the metrics are spot-on for our mining pools.",
+        name: "Dimitri Koval",
+        role: "Pool coordinator",
+        avatar: "img/avatar/29.jpg",
+      },
+      {
+        quote: "We trust the payout schedule because the transparency is better than any exchange.",
+        name: "Naomi Kim",
+        role: "Risk analyst",
+        avatar: "img/avatar/41.jpg",
+      },
+      {
+        quote: "The profitability view keeps our investors aligned and reduces support tickets.",
+        name: "Sofia Mendes",
+        role: "Investor relations",
+        avatar: "img/avatar/50.jpg",
+      },
+      {
+        quote: "Onboarding large clients is now a breeze thanks to the simple projections.",
+        name: "Ethan Pierce",
+        role: "Enterprise sales",
+        avatar: "img/avatar/59.jpg",
+      },
+      {
+        quote: "We can model revenue scenarios in seconds and instantly share updates with our team.",
+        name: "Aria Patel",
+        role: "Finance lead",
+        avatar: "img/avatar/3.jpg",
+      },
+      {
+        quote: "The weekly breakdown and alerts help us stay ahead of market swings.",
+        name: "Marcos Silva",
+        role: "Growth strategist",
+        avatar: "img/avatar/15.jpg",
+      },
+    ];
+
     function initTestimonials(){
-      const slider = document.getElementById("testimonialSlider");
-      if (!slider) return;
+      const grid = document.getElementById("testimonialGrid");
+      if (!grid) return;
 
-      const slides = Array.from(slider.querySelectorAll(".testimonialSlide"));
-      const dotsWrap = document.getElementById("testimonialDots");
       const buttons = Array.from(document.querySelectorAll(".testimonialBtn"));
-
-      if (!slides.length || !dotsWrap) return;
-
-      let index = 0;
-      let timer = null;
       const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+      let timer = null;
 
-      const dots = slides.map((_, i) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "testimonialDot";
-        dot.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
-        dot.addEventListener("click", () => {
-          setSlide(i);
-          restartTimer();
-        });
-        dotsWrap.appendChild(dot);
-        return dot;
-      });
+      const starHTML = `
+        <div class="testimonialStars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+      `;
 
-      function setSlide(nextIndex){
-        index = (nextIndex + slides.length) % slides.length;
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("is-active", i === index);
-        });
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("is-active", i === index);
-        });
+      function shuffle(list){
+        const copy = [...list];
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
       }
 
-      function step(dir){
-        setSlide(index + dir);
+      function renderSet(){
+        const selection = shuffle(testimonialData).slice(0, 4);
+        grid.innerHTML = "";
+        selection.forEach((item, index) => {
+          const card = document.createElement("article");
+          card.className = "testimonialCard";
+          card.setAttribute("aria-label", `Testimonial ${index + 1} of 4`);
+          card.innerHTML = `
+            ${starHTML}
+            <p class="testimonialQuote">“${item.quote}”</p>
+            <div class="testimonialPerson">
+              <img class="testimonialAvatar" src="${item.avatar}" alt="Client avatar of ${item.name}" loading="lazy" decoding="async" />
+              <div>
+                <div class="testimonialName">${item.name}</div>
+                <div class="testimonialRole">${item.role}</div>
+              </div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
       }
 
       function stopTimer(){
@@ -3054,9 +3019,7 @@
       function startTimer(){
         if (prefersReduced) return;
         stopTimer();
-        timer = setInterval(() => {
-          step(1);
-        }, 7000);
+        timer = setInterval(renderSet, 7000);
       }
 
       function restartTimer(){
@@ -3066,18 +3029,17 @@
 
       buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
-          const dir = btn.getAttribute("data-dir") === "prev" ? -1 : 1;
-          step(dir);
+          renderSet();
           restartTimer();
         });
       });
 
-      slider.addEventListener("mouseenter", stopTimer);
-      slider.addEventListener("mouseleave", startTimer);
-      slider.addEventListener("focusin", stopTimer);
-      slider.addEventListener("focusout", startTimer);
+      grid.addEventListener("mouseenter", stopTimer);
+      grid.addEventListener("mouseleave", startTimer);
+      grid.addEventListener("focusin", stopTimer);
+      grid.addEventListener("focusout", startTimer);
 
-      setSlide(0);
+      renderSet();
       startTimer();
     }
 
