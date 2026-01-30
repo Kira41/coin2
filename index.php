@@ -1471,6 +1471,9 @@
       border-radius: 999px;
       border: 2px solid rgba(0,0,0,0.40);
       background: rgba(255,255,255,0.10);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
       margin-left: -10px;
     }
@@ -3103,6 +3106,35 @@
     );
 
     requestAnimationFrame(updateAffiliateCurve);
+
+    function initDailyUserAvatars(){
+      const avatars = Array.from(document.querySelectorAll(".userChip .avatar"));
+      if (!avatars.length) return;
+
+      const total = 65;
+      const indices = Array.from({ length: total }, (_, i) => i + 1);
+
+      function shuffle(list){
+        for (let i = list.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [list[i], list[j]] = [list[j], list[i]];
+        }
+        return list;
+      }
+
+      function applyAvatars(){
+        const pool = shuffle([...indices]);
+        avatars.forEach((avatar, idx) => {
+          const number = pool[idx % pool.length];
+          avatar.style.backgroundImage = `url("img/avatar/${number}.jpg")`;
+        });
+      }
+
+      applyAvatars();
+      window.setInterval(applyAvatars, 60 * 60 * 1000);
+    }
+
+    initDailyUserAvatars();
   </script>
 </body>
 </html>
