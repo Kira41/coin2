@@ -1448,7 +1448,7 @@
 
     .userChip{
       border-radius: 999px;
-      padding: 16px 20px;
+      padding: 19px 20px;
       display:flex;
       align-items:center;
       gap: 18px;
@@ -1456,7 +1456,7 @@
       border: 1px solid rgba(255,255,255,0.10);
       backdrop-filter: var(--blur);
       -webkit-backdrop-filter: var(--blur);
-      min-width: 360px;
+      min-width: 720px;
     }
 
     .avatars{
