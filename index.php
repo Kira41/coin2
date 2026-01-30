@@ -1448,34 +1448,34 @@
 
     .userChip{
       border-radius: 999px;
-      padding: 32px 40px;
+      padding: 16px 20px;
       display:flex;
       align-items:center;
-      gap: 36px;
+      gap: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.10);
       backdrop-filter: var(--blur);
       -webkit-backdrop-filter: var(--blur);
-      min-width: 720px;
+      min-width: 360px;
     }
 
     .avatars{
       display:flex;
       align-items:center;
-      margin-left: 32px;
+      margin-left: 16px;
     }
 
     .avatar{
-      width: 104px;
-      height: 104px;
+      width: 52px;
+      height: 52px;
       border-radius: 999px;
-      border: 4px solid rgba(0,0,0,0.40);
+      border: 2px solid rgba(0,0,0,0.40);
       background: rgba(255,255,255,0.10);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-      margin-left: -50px;
+      margin-left: -25px;
     }
 
     .userStat{
@@ -1485,8 +1485,8 @@
       min-width: 0;
     }
 
-    .userStat .big{ font-weight: 1000; font-size: 56px; line-height: 1; }
-    .userStat .sub{ color: rgba(233,238,246,0.70); font-weight: 800; font-size: 26px; }
+    .userStat .big{ font-weight: 1000; font-size: 28px; line-height: 1; }
+    .userStat .sub{ color: rgba(233,238,246,0.70); font-weight: 800; font-size: 13px; }
 
     .ctaRow{
       display:flex;
