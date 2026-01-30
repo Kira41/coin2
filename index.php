@@ -1476,6 +1476,9 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      overflow: hidden;
+      background-clip: padding-box;
+      clip-path: circle(50% at 50% 50%);
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
       margin-left: 0;
     }
