@@ -1388,7 +1388,7 @@
     }
 
     .heroLeft{
-      margin-left: -14px;
+      margin-left: clamp(20px, 6vw, 80px);
       max-width: 680px;
     }
 
@@ -1402,7 +1402,7 @@
     .heroKicker .acc{ color: var(--accent); }
 
     .heroHeadline{
-      margin: 0 0 10px;
+      margin: 0 0 25px;
       font-weight: 1000;
       font-size: clamp(44px, 4.2vw, 72px);
       line-height: 0.98;
@@ -1484,7 +1484,7 @@
     }
 
     .avatar + .avatar{
-      margin-left: -18px;
+      margin-left: -30px;
     }
 
     .userStat{
