@@ -1448,26 +1448,26 @@
 
     .userChip{
       border-radius: 999px;
-      padding: 12px 14px;
+      padding: 16px 20px;
       display:flex;
       align-items:center;
-      gap: 14px;
+      gap: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.10);
       backdrop-filter: var(--blur);
       -webkit-backdrop-filter: var(--blur);
-      min-width: 300px;
+      min-width: 360px;
     }
 
     .avatars{
       display:flex;
       align-items:center;
-      margin-left: -6px;
+      margin-left: 16px;
     }
 
     .avatar{
-      width: 30px;
-      height: 30px;
+      width: 52px;
+      height: 52px;
       border-radius: 999px;
       border: 2px solid rgba(0,0,0,0.40);
       background: rgba(255,255,255,0.10);
@@ -1475,7 +1475,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-      margin-left: -10px;
+      margin-left: -25px;
     }
 
     .userStat{
