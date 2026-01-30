@@ -1125,7 +1125,7 @@
 
     .testimonialGrid{
       display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
       padding: 24px;
     }
@@ -1183,12 +1183,13 @@
 
     @media (max-width: 1050px){
       .testimonialsHeader{ align-items:flex-start; flex-direction:column; }
-      .testimonialGrid{ grid-template-columns: 1fr; }
+      .testimonialGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 520px){
       .testimonialQuote{ font-size: 16px; }
       .testimonialBtn{ width: 42px; height: 42px; }
+      .testimonialGrid{ grid-template-columns: 1fr; }
     }
 
   
