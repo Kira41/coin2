@@ -1199,7 +1199,7 @@
 
     .latestGrid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
       align-items:start;
     }
@@ -1217,11 +1217,13 @@
       overflow:hidden;
       border-radius: 18px;
       padding: 0;
+      min-width: 0;
     }
 
     .latestTable{
       width: 100%;
       border-collapse: collapse;
+      table-layout: fixed;
     }
 
     .latestTable thead th{
@@ -1242,6 +1244,7 @@
       font-weight: 850;
       font-size: 15px;
       border-top: 1px solid rgba(255,255,255,0.06);
+      overflow-wrap: anywhere;
     }
 
     .latestTable tbody tr:nth-child(odd){
@@ -1276,6 +1279,18 @@
 
     @media (max-width: 1050px){
       .latestGrid{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px){
+      .latestTable thead th{
+        padding: 12px 12px;
+        font-size: 12px;
+      }
+
+      .latestTable td{
+        padding: 12px 12px;
+        font-size: 13px;
+      }
     }
 
   
