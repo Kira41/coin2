@@ -908,6 +908,107 @@
       .tradeGrid{ grid-template-columns: 1fr; }
     }
 
+    /* ===== Trading packs section ===== */
+    .packSection{
+      margin-top: 56px;
+    }
+
+    .packHeader{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .packTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: .2px;
+      font-size: clamp(34px, 4.2vw, 52px);
+      line-height: 1.08;
+    }
+
+    .packLead{
+      margin: 0;
+      color: rgba(233,238,246,0.78);
+      font-size: 16px;
+      max-width: 540px;
+    }
+
+    .packGrid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .packCard{
+      padding: 20px;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .packName{
+      margin: 0;
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .packMeta{
+      color: rgba(233,238,246,0.7);
+      font-size: 14px;
+    }
+
+    .packLevel{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(184,255,0,0.12);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .packList{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display:grid;
+      gap: 8px;
+      color: rgba(233,238,246,0.85);
+      font-size: 14px;
+    }
+
+    .packList li{
+      display:flex;
+      gap: 8px;
+      align-items:flex-start;
+    }
+
+    .packList i{
+      color: var(--accent);
+      margin-top: 2px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 1200px){
+      .packGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 680px){
+      .packGrid{ grid-template-columns: 1fr; }
+    }
+
     /* ===== Wexon statistics section (like screenshot) ===== */
     .stats{
       margin-top: 56px;
@@ -2350,6 +2451,57 @@
             <li><span>03</span>Clear insights so you can invest with confidence.</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="packSection" aria-label="Trading packs">
+      <div class="packHeader">
+        <div>
+          <h2 class="packTitle">Trading packs for every investment level.</h2>
+          <p class="packLead">Choose a pack that matches your ambition. The more you invest, the more you can win with higher-tier trading support.</p>
+        </div>
+      </div>
+      <div class="packGrid">
+        <article class="packCard glass">
+          <span class="packLevel">Bronze</span>
+          <h3 class="packName">Bronze Pack</h3>
+          <p class="packMeta">Entry-level trading guidance to help you start investing with confidence.</p>
+          <ul class="packList">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Starter market insights.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Low-risk trade ideas.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Weekly progress check-ins.</li>
+          </ul>
+        </article>
+        <article class="packCard glass">
+          <span class="packLevel">Silver</span>
+          <h3 class="packName">Silver Pack</h3>
+          <p class="packMeta">Balanced investing with sharper signals and proactive trading updates.</p>
+          <ul class="packList">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Enhanced trade alerts.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Portfolio rebalancing tips.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Priority support response.</li>
+          </ul>
+        </article>
+        <article class="packCard glass">
+          <span class="packLevel">Gold</span>
+          <h3 class="packName">Gold Pack</h3>
+          <p class="packMeta">Accelerated growth with deeper analysis and active strategy reviews.</p>
+          <ul class="packList">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Advanced market analytics.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Custom trade planning.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Dedicated account advisor.</li>
+          </ul>
+        </article>
+        <article class="packCard glass">
+          <span class="packLevel">Diamond</span>
+          <h3 class="packName">Diamond Pack</h3>
+          <p class="packMeta">Premium investing for maximum win potential and white-glove trading care.</p>
+          <ul class="packList">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Elite trading desk access.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>High-volume strategy execution.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>24/7 priority monitoring.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
