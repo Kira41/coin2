@@ -1567,7 +1567,7 @@
     }
 
     @media (max-width: 520px){
-      .affLeft{ padding: 14px; }
+      .affLeft{ display: none; }
       .affStepBadge{ width: 78px; height: 78px; border-radius: 24px; font-size: 30px; }
       .affMeta{ font-size: 14px; }
       .affMeta .lvl{ font-size: 15px; }
