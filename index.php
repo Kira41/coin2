@@ -2172,6 +2172,13 @@
       .heroKicker{ font-size: 16px; }
       .pillBtn{ padding: 9px 12px; }
       .langPill{ padding: 8px 10px; }
+      .avatar{
+        width: 40px;
+        height: 40px;
+        border-width: 1.5px;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.30);
+      }
+      .avatar + .avatar{ margin-left: -18px; }
     }
 
   </style>
