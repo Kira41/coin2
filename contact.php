@@ -13,10 +13,12 @@
   </div>
   <div class="wrap">
     <header class="heroNav">
-      <div class="brand" aria-label="wexon">
-        <div class="brandMark" aria-hidden="true"><span></span></div>
-        <div class="brandName">wexon</div>
-      </div>
+      <a class="brand" href="index.php" aria-label="wexon">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/412.png">
+            <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
+          </picture>
+        </a>
 
       <nav class="heroLinks" aria-label="Primary">
         <a href="index.php">Home</a>
@@ -105,6 +107,7 @@
     <footer class="site-footer glass">
       <div class="footer-grid">
         <div class="footer-brand">
+          <img class="footer-logo" src="img/412.png" alt="Wexon logo" loading="lazy" decoding="async">
           <div class="footer-title">Coin Trade</div>
           <p class="footer-copy">Canada's leading cryptocurrency trading platform. Trade with confidence, security, and speed.</p>
           <div class="footer-icons" aria-label="Social links">
