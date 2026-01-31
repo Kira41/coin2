@@ -1603,17 +1603,15 @@
       display:block;
     }
 
-    .footer-title{
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: .2px;
-    }
-
     .footer-copy{
       color: rgba(233,238,246,0.65);
       font-weight: 650;
       line-height: 1.6;
       margin: 0;
+    }
+
+    .footer-copy-wide{
+      grid-column: 1 / -1;
     }
 
     .footer-icons{
@@ -2728,8 +2726,6 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="footer-logo" src="img/412.png" alt="Wexon logo" loading="lazy" decoding="async">
-          <div class="footer-title">Coin Trade</div>
-          <p class="footer-copy">Canada's leading cryptocurrency AI trading platform. Trade with confidence, security, and speed.</p>
           <div class="footer-icons" aria-label="Social links">
             <a class="footer-icon" href="#" aria-label="Telegram">
               <i class="fa-brands fa-telegram" aria-hidden="true"></i>
@@ -2787,10 +2783,12 @@
             </a>
           </div>
         </div>
+
+        <p class="footer-copy footer-copy-wide">Canada's leading cryptocurrency AI trading platform. Trade with confidence, security, and speed.</p>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Coin Trade. All rights reserved.</span>
+        <span>© 2026. All rights reserved.</span>
         <span>Built for fast, secure, and compliant crypto AI trading.</span>
       </div>
     </footer>
