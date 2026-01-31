@@ -144,6 +144,31 @@
       padding: 48px 20px 60px;
     }
 
+    .reveal{
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal-left{ transform: translateX(-48px); }
+    .reveal-right{ transform: translateX(48px); }
+    .reveal-up{ transform: translateY(32px); }
+    .reveal-fade{ transform: translateY(0); }
+
+    .reveal.is-visible{
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
     .title{
       font-weight: 800;
       letter-spacing: .3px;
@@ -2156,7 +2181,7 @@
       </div>
 
       <div class="heroMain">
-        <div class="heroLeft">
+        <div class="heroLeft reveal reveal-left">
           <div class="heroKicker"><span class="acc">Innovative</span> cloud mining &amp; trading <span class="acc">system</span></div>
 
           <div class="heroLogos" aria-label="Supported coins">
@@ -2204,17 +2229,17 @@
           </div>
         </div>
 
-        <div class="heroArt" aria-label="Hero art">
+        <div class="heroArt reveal reveal-right" aria-label="Hero art">
           <img class="heroImg" src="img/bg.png" alt="Cloud mining illustration" />
         </div>
       </div>
     </section>
 
-    <h1 class="title">Mining <span class="accent">calculator</span>.</h1>
+    <h1 class="title reveal reveal-up">Mining <span class="accent">calculator</span>.</h1>
 
     <div class="layout">
       <!-- LEFT -->
-      <aside class="side glass">
+      <aside class="side glass reveal reveal-left">
         <div class="centerTitle">Investment currency</div>
 
         <!-- Investment currency dropdown (like screenshot) -->
@@ -2247,7 +2272,7 @@
       </aside>
 
       <!-- CENTER -->
-      <main class="center glass">
+      <main class="center glass reveal reveal-up">
         <!-- background decor -->
         <div class="centerDecor" aria-hidden="true">
           <div class="centerGlow"></div>
@@ -2343,7 +2368,7 @@
       </main>
 
       <!-- RIGHT -->
-      <aside class="side glass">
+      <aside class="side glass reveal reveal-right">
         <div class="label">Mining currency:</div>
 
         <!-- Mining currency dropdown -->
@@ -2374,10 +2399,10 @@
 
     <!-- Marketing section (like screenshot) -->
     <section class="marketing" aria-label="Marketing">
-      <h2 class="mkTitle">Marketing</h2>
+      <h2 class="mkTitle reveal reveal-up">Marketing</h2>
 
       <div class="mkGrid">
-        <article class="mkCard glass">
+        <article class="mkCard glass reveal reveal-left">
           <header class="mkHeader">
             <div class="mkIcon" aria-hidden="true">Ł</div>
             <div class="mkName">Scrypt</div>
@@ -2396,7 +2421,7 @@
           </div>
         </article>
 
-        <article class="mkCard glass">
+        <article class="mkCard glass reveal reveal-up">
           <header class="mkHeader">
             <div class="mkIcon" aria-hidden="true">₿</div>
             <div class="mkName">SHA-256</div>
@@ -2415,7 +2440,7 @@
           </div>
         </article>
 
-        <article class="mkCard glass">
+        <article class="mkCard glass reveal reveal-right">
           <header class="mkHeader">
             <div class="mkIcon" aria-hidden="true">➜</div>
             <div class="mkName">KHeavyHash</div>
@@ -2438,12 +2463,12 @@
 
     <section class="trade" aria-label="Trading">
       <div class="tradeGrid">
-        <div class="tradeCard glass">
+        <div class="tradeCard glass reveal reveal-left">
           <h2 class="tradeTitle">Trading expertise for smarter crypto investing.</h2>
           <p class="tradeText">We are an expert company in trading and will help you invest money in crypto through mining and trading strategies that fit your goals.</p>
           <p class="tradeText">From market entry to portfolio growth, we combine analytics, risk management, and real-time insights to keep your investments on track.</p>
         </div>
-        <div class="tradeCard glass">
+        <div class="tradeCard glass reveal reveal-right">
           <h3 class="tradeTitle">Trade support highlights</h3>
           <ul class="tradeList">
             <li><span>01</span>Dedicated guidance for spot and long-term crypto trades.</li>
@@ -2455,14 +2480,14 @@
     </section>
 
     <section class="packSection" aria-label="Trading packs">
-      <div class="packHeader">
+      <div class="packHeader reveal reveal-up">
         <div>
           <h2 class="packTitle">Trading packs for every investment level.</h2>
           <p class="packLead">Choose a pack that matches your ambition. The more you invest, the more you can win with higher-tier trading support.</p>
         </div>
       </div>
       <div class="packGrid">
-        <article class="packCard glass">
+        <article class="packCard glass reveal reveal-left">
           <span class="packLevel">Bronze</span>
           <h3 class="packName">Bronze Pack</h3>
           <p class="packMeta">Entry-level trading guidance to help you start investing with confidence.</p>
@@ -2472,7 +2497,7 @@
             <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Weekly progress check-ins.</li>
           </ul>
         </article>
-        <article class="packCard glass">
+        <article class="packCard glass reveal reveal-up">
           <span class="packLevel">Silver</span>
           <h3 class="packName">Silver Pack</h3>
           <p class="packMeta">Balanced investing with sharper signals and proactive trading updates.</p>
@@ -2482,7 +2507,7 @@
             <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Priority support response.</li>
           </ul>
         </article>
-        <article class="packCard glass">
+        <article class="packCard glass reveal reveal-up">
           <span class="packLevel">Gold</span>
           <h3 class="packName">Gold Pack</h3>
           <p class="packMeta">Accelerated growth with deeper analysis and active strategy reviews.</p>
@@ -2492,7 +2517,7 @@
             <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Dedicated account advisor.</li>
           </ul>
         </article>
-        <article class="packCard glass">
+        <article class="packCard glass reveal reveal-right">
           <span class="packLevel">Diamond</span>
           <h3 class="packName">Diamond Pack</h3>
           <p class="packMeta">Premium investing for maximum win potential and white-glove trading care.</p>
@@ -2507,7 +2532,7 @@
 
     <!-- Wexon statistics section (like screenshot) -->
     <section class="stats" aria-label="Wexon statistics">
-      <div class="statsHeader">
+      <div class="statsHeader reveal reveal-up">
         <h2 class="statsTitle"><span class="w">Wexon</span> <span class="s">statistics</span></h2>
         <div class="growCallout" aria-label="We are growing">
           <span class="growIcon" aria-hidden="true">
@@ -2518,7 +2543,7 @@
       </div>
 
       <div class="statsGrid">
-        <article class="statCard glass" aria-label="Days online">
+        <article class="statCard glass reveal reveal-left" aria-label="Days online">
           <div class="statTop">
             <span class="statIcon" aria-hidden="true">
               <img alt="" loading="lazy" decoding="async" src="https://api.iconify.design/mdi:calendar-check.svg?color=%23b8ff00&width=22&height=22">
@@ -2528,7 +2553,7 @@
           <div class="statValue" id="statDays">210</div>
         </article>
 
-        <article class="statCard glass" aria-label="Users">
+        <article class="statCard glass reveal reveal-up" aria-label="Users">
           <div class="statTop">
             <span class="statIcon" aria-hidden="true">
               <img alt="" loading="lazy" decoding="async" src="https://api.iconify.design/mdi:account-group.svg?color=%23b8ff00&width=22&height=22">
@@ -2539,7 +2564,7 @@
           <div class="statSub" id="statUsersDelta">+1000 today</div>
         </article>
 
-        <article class="statCard glass" aria-label="Total deposits">
+        <article class="statCard glass reveal reveal-up" aria-label="Total deposits">
           <div class="statTop">
             <span class="statIcon" aria-hidden="true">
               <img alt="" loading="lazy" decoding="async" src="https://api.iconify.design/mdi:bank-plus.svg?color=%23b8ff00&width=22&height=22">
@@ -2550,7 +2575,7 @@
           <div class="statUnit">usd</div>
         </article>
 
-        <article class="statCard glass" aria-label="Total withdrawals">
+        <article class="statCard glass reveal reveal-right" aria-label="Total withdrawals">
           <div class="statTop">
             <span class="statIcon" aria-hidden="true">
               <img alt="" loading="lazy" decoding="async" src="https://api.iconify.design/mdi:bank-minus.svg?color=%23b8ff00&width=22&height=22">
@@ -2565,7 +2590,7 @@
 
     <!-- Client testimonials -->
     <section class="testimonials" aria-label="Client feedback">
-      <div class="testimonialsHeader">
+      <div class="testimonialsHeader reveal reveal-up">
         <h2 class="statsTitle"><span class="w">Client</span> <span class="s">feedback</span></h2>
         <div class="testimonialControls" aria-label="Testimonial navigation">
           <button class="testimonialBtn" type="button" data-dir="prev" aria-label="Previous testimonial">
@@ -2577,13 +2602,13 @@
         </div>
       </div>
 
-      <div class="testimonialGrid glass" id="testimonialGrid" aria-live="polite"></div>
+      <div class="testimonialGrid glass reveal reveal-fade" id="testimonialGrid" aria-live="polite"></div>
     </section>
 
     <!-- Latest deposits / withdrawals section (like screenshot) -->
     <section class="latest" aria-label="Latest deposits and withdrawals">
       <div class="latestGrid">
-        <div>
+        <div class="reveal reveal-left">
           <h2 class="latestTitle">Latest deposits</h2>
           <div class="latestCard glass">
             <table class="latestTable" aria-label="Latest deposits table">
@@ -2599,7 +2624,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="reveal reveal-right">
           <h2 class="latestTitle">Latest withdrawals</h2>
           <div class="latestCard glass">
             <table class="latestTable" aria-label="Latest withdrawals table">
@@ -2619,11 +2644,11 @@
 
     <!-- Affiliate section (like screenshot) -->
     <section class="affiliate" aria-label="Affiliate program">
-      <div class="affTopBar">
+      <div class="affTopBar reveal reveal-up">
         <h2 class="statsTitle"><span class="w">Affiliate</span> <span class="s">program</span></h2>
       </div>
       <div class="affGrid">
-        <div class="affLeft glass">
+        <div class="affLeft glass reveal reveal-left">
           <div class="affGraph" aria-label="Affiliate steps and rewards">
             <canvas class="affCanvas" id="affCanvas" aria-hidden="true"></canvas>
 
@@ -2653,7 +2678,7 @@
           </div>
         </div>
 
-        <div class="affRight">
+        <div class="affRight reveal reveal-right">
           <h2 class="affTitle">Invite friends <span class="acc">and<br/>get rewards</span></h2>
 
           <p class="affText">After registration, receive a unique affiliate link and share the link with your friends.</p>
@@ -2665,7 +2690,7 @@
       </div>
     </section>
 
-    <footer class="site-footer glass">
+    <footer class="site-footer glass reveal reveal-up">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-title">Coin Trade</div>
@@ -3657,6 +3682,28 @@
       els.pricePerTh.textContent = "$1";
     }
 
+    function initRevealOnScroll(){
+      const items = Array.from(document.querySelectorAll(".reveal"));
+      if (!items.length) return;
+
+      const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+      if (prefersReduced || !("IntersectionObserver" in window)) {
+        items.forEach((item) => item.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: "0px 0px -10% 0px" });
+
+      items.forEach((item) => observer.observe(item));
+    }
+
     // ===== Wire up inputs =====
     els.amountRange.addEventListener('input', () => {
       els.amountInput.value = Number(els.amountRange.value).toFixed(2);
@@ -3727,6 +3774,7 @@
     renderMarketingTables();
     renderLatestTables();
     initTestimonials();
+    initRevealOnScroll();
 
     // ===== Affiliate canvas animation: steps 1-3 =====
     function initAffiliateCanvas(){
