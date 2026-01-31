@@ -405,17 +405,15 @@ a{ color: inherit; text-decoration:none; }
   display:block;
 }
 
-.footer-title{
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: .2px;
-}
-
 .footer-copy{
   color: rgba(233,238,246,0.65);
   font-weight: 650;
   line-height: 1.6;
   margin: 0;
+}
+
+.footer-copy-wide{
+  grid-column: 1 / -1;
 }
 
 .footer-icons{
