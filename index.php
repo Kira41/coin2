@@ -2182,7 +2182,7 @@
 
       <div class="heroMain">
         <div class="heroLeft reveal reveal-left">
-          <div class="heroKicker"><span class="acc">Innovative</span> cloud mining &amp; trading <span class="acc">system</span></div>
+          <div class="heroKicker"><span class="acc">Innovative</span> cloud mining &amp; AI trading <span class="acc">system</span></div>
 
           <div class="heroLogos" aria-label="Supported coins">
             <img alt="Bitcoin" loading="lazy" decoding="async" src="https://api.iconify.design/simple-icons:bitcoin.svg?color=%23B8FE08&width=22&height=22">
@@ -2192,9 +2192,9 @@
             <img alt="Solana" loading="lazy" decoding="async" src="https://api.iconify.design/simple-icons:solana.svg?color=%23B8FE08&width=22&height=22">
           </div>
 
-          <h1 class="heroHeadline">Cloud <span class="muted">Mining</span> &amp; <span class="muted">Trading</span></h1>
+          <h1 class="heroHeadline">Cloud <span class="muted">Mining</span> &amp; <span class="muted">AI Trading</span></h1>
 
-          <p class="heroCopy">We are an expert company in trading and will help you invest in crypto through both mining and trading.</p>
+          <p class="heroCopy">We are an expert company in AI trading and will help you invest in crypto through both mining and AI trading.</p>
 
           <div class="heroRow">
             <div class="userChip" role="group" aria-label="Active daily users">
@@ -2461,70 +2461,70 @@
       </div>
     </section>
 
-    <section class="trade" aria-label="Trading">
+    <section class="trade" aria-label="AI Trading">
       <div class="tradeGrid">
         <div class="tradeCard glass reveal reveal-left">
-          <h2 class="tradeTitle">Trading expertise for smarter crypto investing.</h2>
-          <p class="tradeText">We are an expert company in trading and will help you invest money in crypto through mining and trading strategies that fit your goals.</p>
-          <p class="tradeText">From market entry to portfolio growth, we combine analytics, risk management, and real-time insights to keep your investments on track.</p>
+          <h2 class="tradeTitle">AI trading expertise for smarter crypto investing.</h2>
+          <p class="tradeText">We are an expert company in AI trading and will help you invest money in crypto through mining and AI trading strategies that fit your goals.</p>
+          <p class="tradeText">From market entry to portfolio growth, we combine AI analytics, risk management, and real-time insights to keep your investments on track.</p>
         </div>
         <div class="tradeCard glass reveal reveal-right">
-          <h3 class="tradeTitle">Trade support highlights</h3>
+          <h3 class="tradeTitle">AI trade support highlights</h3>
           <ul class="tradeList">
-            <li><span>01</span>Dedicated guidance for spot and long-term crypto trades.</li>
-            <li><span>02</span>Mining-to-trading pathways that help reinvest earnings.</li>
-            <li><span>03</span>Clear insights so you can invest with confidence.</li>
+            <li><span>01</span>Dedicated guidance for spot and long-term AI-assisted crypto trades.</li>
+            <li><span>02</span>Mining-to-AI-trading pathways that help reinvest earnings.</li>
+            <li><span>03</span>Clear AI insights so you can invest with confidence.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="packSection" aria-label="Trading packs">
+    <section class="packSection" aria-label="AI trading packs">
       <div class="packHeader reveal reveal-up">
         <div>
-          <h2 class="packTitle">Trading packs for every investment level.</h2>
-          <p class="packLead">Choose a pack that matches your ambition. The more you invest, the more you can win with higher-tier trading support.</p>
+          <h2 class="packTitle">AI trading packs for every investment level.</h2>
+          <p class="packLead">Choose a pack that matches your ambition. The more you invest, the more you can win with higher-tier AI trading support.</p>
         </div>
       </div>
       <div class="packGrid">
         <article class="packCard glass reveal reveal-left">
           <span class="packLevel">Bronze</span>
           <h3 class="packName">Bronze Pack</h3>
-          <p class="packMeta">Entry-level trading guidance to help you start investing with confidence.</p>
+          <p class="packMeta">Entry-level AI trading guidance to help you start investing with confidence.</p>
           <ul class="packList">
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Starter market insights.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Low-risk trade ideas.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Weekly progress check-ins.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Starter AI market insights.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Low-risk AI trade ideas.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Weekly AI progress check-ins.</li>
           </ul>
         </article>
         <article class="packCard glass reveal reveal-up">
           <span class="packLevel">Silver</span>
           <h3 class="packName">Silver Pack</h3>
-          <p class="packMeta">Balanced investing with sharper signals and proactive trading updates.</p>
+          <p class="packMeta">Balanced investing with sharper AI signals and proactive AI trading updates.</p>
           <ul class="packList">
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Enhanced trade alerts.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Portfolio rebalancing tips.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Priority support response.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Enhanced AI trade alerts.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>AI-guided portfolio rebalancing tips.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Priority AI support response.</li>
           </ul>
         </article>
         <article class="packCard glass reveal reveal-up">
           <span class="packLevel">Gold</span>
           <h3 class="packName">Gold Pack</h3>
-          <p class="packMeta">Accelerated growth with deeper analysis and active strategy reviews.</p>
+          <p class="packMeta">Accelerated growth with deeper AI analysis and active strategy reviews.</p>
           <ul class="packList">
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Advanced market analytics.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Custom trade planning.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Dedicated account advisor.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Advanced AI market analytics.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Custom AI trade planning.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Dedicated AI account advisor.</li>
           </ul>
         </article>
         <article class="packCard glass reveal reveal-right">
           <span class="packLevel">Diamond</span>
           <h3 class="packName">Diamond Pack</h3>
-          <p class="packMeta">Premium investing for maximum win potential and white-glove trading care.</p>
+          <p class="packMeta">Premium investing for maximum win potential and white-glove AI trading care.</p>
           <ul class="packList">
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Elite trading desk access.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>High-volume strategy execution.</li>
-            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>24/7 priority monitoring.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Elite AI trading desk access.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>High-volume AI strategy execution.</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>24/7 AI priority monitoring.</li>
           </ul>
         </article>
       </div>
@@ -2694,7 +2694,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-title">Coin Trade</div>
-          <p class="footer-copy">Canada's leading cryptocurrency trading platform. Trade with confidence, security, and speed.</p>
+          <p class="footer-copy">Canada's leading cryptocurrency AI trading platform. Trade with confidence, security, and speed.</p>
           <div class="footer-icons" aria-label="Social links">
             <a class="footer-icon" href="#" aria-label="Telegram">
               <i class="fa-brands fa-telegram" aria-hidden="true"></i>
@@ -2756,7 +2756,7 @@
 
       <div class="footer-bottom">
         <span>© 2026 Coin Trade. All rights reserved.</span>
-        <span>Built for fast, secure, and compliant crypto trading.</span>
+        <span>Built for fast, secure, and compliant crypto AI trading.</span>
       </div>
     </footer>
   </div>
