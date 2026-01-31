@@ -40,7 +40,7 @@
       <div>
         <div class="page-breadcrumb">Home / Support / FAQ</div>
         <h1 class="page-title">Frequently Asked <span>Questions</span></h1>
-        <p class="page-subtitle">Quick answers to the most common questions about accounts, mining packages, payouts, and platform security.</p>
+        <p class="page-subtitle">Quick answers to the most common questions about accounts, mining and trading packages, payouts, and platform security.</p>
       </div>
       <div class="page-hero-card">
         <div class="badge"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Updated weekly</div>
@@ -59,7 +59,7 @@
         </article>
         <article class="card">
           <h4>Do you offer a free plan?</h4>
-          <p>Yes. Every new member receives a starter mining bonus to explore the dashboard risk-free.</p>
+          <p>Yes. Every new member receives a starter mining and trading bonus to explore the dashboard risk-free.</p>
         </article>
         <article class="card">
           <h4>Which coins are supported?</h4>
@@ -80,8 +80,8 @@
           <p>Network fees apply per withdrawal. We highlight estimated fees before you confirm.</p>
         </article>
         <article class="card">
-          <h4>Can I upgrade a mining package?</h4>
-          <p>Yes. Upgrades apply instantly and stack on top of your active contract.</p>
+          <h4>Can I upgrade a mining or trading package?</h4>
+          <p>Yes. Upgrades apply instantly and stack on top of your active contract or strategy.</p>
         </article>
       </div>
     </section>

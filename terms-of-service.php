@@ -40,7 +40,7 @@
       <div>
         <div class="page-breadcrumb">Home / Legal / Terms of Service</div>
         <h1 class="page-title">Terms of <span>Service</span></h1>
-        <p class="page-subtitle">Review the rules for accessing Coin Trade services, account obligations, and usage limitations.</p>
+        <p class="page-subtitle">Review the rules for accessing Coin Trade mining and trading services, account obligations, and usage limitations.</p>
       </div>
       <div class="page-hero-card">
         <div class="badge"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Agreement</div>

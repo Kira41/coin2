@@ -76,7 +76,7 @@
       <div class="page-grid">
         <article class="card">
           <h4>Service delivery</h4>
-          <p>Operate mining contracts, verify transactions, and generate performance insights.</p>
+          <p>Operate mining and trading services, verify transactions, and generate performance insights.</p>
         </article>
         <article class="card">
           <h4>Security</h4>
