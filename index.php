@@ -1597,6 +1597,12 @@
       gap: 14px;
     }
 
+    .footer-logo{
+      width: 120px;
+      height: auto;
+      display:block;
+    }
+
     .footer-title{
       font-weight: 900;
       font-size: 20px;
@@ -1726,6 +1732,7 @@
     @media (max-width: 520px){
       .site-footer{ padding: 22px 20px; }
       .footer-bottom{ flex-direction:column; align-items:flex-start; }
+      .brand img{ height: 40px; }
     }
 
   
@@ -1751,6 +1758,16 @@
       letter-spacing: .2px;
       color:#fff;
       user-select:none;
+    }
+
+    .brand picture{
+      display:block;
+    }
+
+    .brand img{
+      display:block;
+      height: 52px;
+      width: auto;
     }
 
     .brandMark{
@@ -2170,10 +2187,12 @@
     <!-- Hero section (uses img/bg.png) -->
     <section class="hero" aria-label="Hero">
       <div class="heroNav">
-        <div class="brand" aria-label="wexon">
-          <div class="brandMark" aria-hidden="true"><span></span></div>
-          <div class="brandName">wexon</div>
-        </div>
+        <a class="brand" href="index.php" aria-label="wexon">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/412.png">
+            <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
+          </picture>
+        </a>
 
         <div class="heroLinks" aria-label="Primary navigation">
           <a href="index.php">Home</a>
@@ -2708,6 +2727,7 @@
     <footer class="site-footer glass reveal reveal-up">
       <div class="footer-grid">
         <div class="footer-brand">
+          <img class="footer-logo" src="img/412.png" alt="Wexon logo" loading="lazy" decoding="async">
           <div class="footer-title">Coin Trade</div>
           <p class="footer-copy">Canada's leading cryptocurrency AI trading platform. Trade with confidence, security, and speed.</p>
           <div class="footer-icons" aria-label="Social links">
