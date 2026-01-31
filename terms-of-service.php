@@ -106,11 +106,35 @@
 
     <footer class="site-footer glass">
       <div class="footer-grid">
-        <div>
+        <div class="footer-brand">
           <div class="footer-title">Coin Trade</div>
           <p class="footer-copy">Canada's leading cryptocurrency trading platform. Trade with confidence, security, and speed.</p>
+          <div class="footer-icons" aria-label="Social links">
+            <a class="footer-icon" href="#" aria-label="Telegram">
+              <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="X">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a class="footer-icon" href="#" aria-label="Discord">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-        <div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Markets</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
           <h3 class="footer-heading">Support</h3>
           <ul class="footer-links">
             <li><a href="faq.php">FAQ</a></li>
@@ -118,7 +142,8 @@
             <li><a href="help-center.php">Help Center</a></li>
           </ul>
         </div>
-        <div>
+
+        <div class="footer-column">
           <h3 class="footer-heading">Legal</h3>
           <ul class="footer-links">
             <li><a href="privacy-policy.php">Privacy Policy</a></li>
@@ -127,10 +152,25 @@
             <li><a href="compliance.php">Compliance</a></li>
           </ul>
         </div>
+
+        <div class="footer-column app-col">
+          <h3 class="footer-heading">Download App</h3>
+          <div class="footer-apps">
+            <a class="footer-app-btn" href="#" aria-label="Download on the App Store">
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              App Store
+            </a>
+            <a class="footer-app-btn" href="#" aria-label="Get it on Google Play">
+              <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+              Google Play
+            </a>
+          </div>
+        </div>
       </div>
+
       <div class="footer-bottom">
         <span>© 2026 Coin Trade. All rights reserved.</span>
-        <span>Questions? Visit our Help Center for 24/7 assistance.</span>
+        <span>Built for fast, secure, and compliant crypto trading.</span>
       </div>
     </footer>
   </div>
