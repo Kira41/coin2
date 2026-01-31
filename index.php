@@ -2066,7 +2066,7 @@
             <img alt="Solana" loading="lazy" decoding="async" src="https://api.iconify.design/simple-icons:solana.svg?color=%23B8FE08&width=22&height=22">
           </div>
 
-          <h1 class="heroHeadline">Cloud<br/><span class="muted">Mining</span> &amp;<br/><span class="muted">Trading</span></h1>
+          <h1 class="heroHeadline">Cloud <span class="muted">Mining</span> &amp; <span class="muted">Trading</span></h1>
 
           <p class="heroCopy">We are an expert company in trading and will help you invest in crypto through both mining and trading.</p>
 

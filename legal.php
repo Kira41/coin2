@@ -40,7 +40,7 @@
       <div>
         <div class="page-breadcrumb">Home / Legal</div>
         <h1 class="page-title">Legal <span>Center</span></h1>
-        <p class="page-subtitle">Everything you need to understand how Coin Trade protects users, handles data, and keeps the platform compliant.</p>
+        <p class="page-subtitle">Everything you need to understand how Coin Trade protects users, handles data, and keeps mining and trading services compliant.</p>
       </div>
       <div class="page-hero-card">
         <div class="badge"><i class="fa-solid fa-shield" aria-hidden="true"></i> Transparency</div>

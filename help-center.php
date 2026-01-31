@@ -40,12 +40,12 @@
       <div>
         <div class="page-breadcrumb">Home / Support / Help Center</div>
         <h1 class="page-title">Help <span>Center</span></h1>
-        <p class="page-subtitle">Browse tutorials, troubleshooting guides, and product walkthroughs curated by the Coin Trade success team.</p>
+        <p class="page-subtitle">Browse tutorials, troubleshooting guides, and product walkthroughs for mining and trading curated by the Coin Trade success team.</p>
       </div>
       <div class="page-hero-card">
         <div class="badge"><i class="fa-solid fa-life-ring" aria-hidden="true"></i> Self-serve</div>
         <h3>Popular resources</h3>
-        <p>Start with account setup, two-factor security, or mining contract upgrades.</p>
+        <p>Start with account setup, two-factor security, or mining and trading upgrades.</p>
       </div>
     </section>
 
@@ -57,8 +57,8 @@
           <p>Verification checklist, profile security, and recovery options.</p>
         </article>
         <article class="card">
-          <h4>Mining contracts</h4>
-          <p>Understand hashpower plans, ROI forecasts, and renewal rules.</p>
+          <h4>Mining &amp; trading programs</h4>
+          <p>Understand hashpower plans, trading strategies, ROI forecasts, and renewal rules.</p>
         </article>
         <article class="card">
           <h4>Deposits &amp; withdrawals</h4>
@@ -76,7 +76,11 @@
       <div class="page-grid">
         <article class="card">
           <h4>Launch your first mining plan</h4>
-          <p>Step-by-step guide to selecting a package and tracking performance.</p>
+          <p>Step-by-step guide to selecting a mining package and tracking performance.</p>
+        </article>
+        <article class="card">
+          <h4>Start a trading strategy</h4>
+          <p>Set up your first trading plan, risk limits, and performance alerts.</p>
         </article>
         <article class="card">
           <h4>Protect your account</h4>

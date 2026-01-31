@@ -40,7 +40,7 @@
       <div>
         <div class="page-breadcrumb">Home / Legal / Compliance</div>
         <h1 class="page-title">Compliance <span>Program</span></h1>
-        <p class="page-subtitle">Our compliance framework protects customers, limits fraud, and meets global regulatory expectations.</p>
+        <p class="page-subtitle">Our compliance framework protects customers, limits fraud, and meets global regulatory expectations for mining and trading.</p>
       </div>
       <div class="page-hero-card">
         <div class="badge"><i class="fa-solid fa-shield-check" aria-hidden="true"></i> AML &amp; KYC</div>
