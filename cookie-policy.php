@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="page.css" />
 </head>
 <body>
-  <div class="bg-3d" aria-hidden="true"></div>
+  <div class="bg-3d" aria-hidden="true">
+    <div class="scene" id="cubeScene"></div>
+  </div>
   <div class="wrap">
     <header class="heroNav">
       <div class="brand" aria-label="wexon">
@@ -113,5 +115,6 @@
       </div>
     </footer>
   </div>
+  <script src="page-bg.js"></script>
 </body>
 </html>

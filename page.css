@@ -41,6 +41,7 @@ body::before{
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  perspective: 900px;
   overflow: hidden;
 }
 
@@ -52,6 +53,71 @@ body::before{
     radial-gradient(900px 600px at 20% 10%, rgba(124,37,239,0.16), transparent 60%),
     radial-gradient(700px 500px at 80% 80%, rgba(184,255,0,0.10), transparent 55%),
     radial-gradient(900px 900px at 50% 50%, rgba(255,255,255,0.04), transparent 65%);
+}
+
+.scene{
+  position:absolute;
+  inset:0;
+  transform-style: preserve-3d;
+}
+
+.cube{
+  position:absolute;
+  left:0;
+  top:0;
+  width: var(--s);
+  height: var(--s);
+  transform-style: preserve-3d;
+  transform:
+    translate3d(var(--x), var(--y), var(--z))
+    rotateX(var(--rx))
+    rotateY(var(--ry))
+    rotateZ(var(--rz));
+  animation: spin var(--dur) linear infinite;
+  opacity: 0.9;
+  will-change: transform;
+}
+
+@keyframes spin{
+  from{
+    transform:
+      translate3d(var(--x), var(--y), var(--z))
+      rotateX(var(--rx))
+      rotateY(var(--ry))
+      rotateZ(var(--rz));
+  }
+  to{
+    transform:
+      translate3d(var(--x), var(--y), var(--z))
+      rotateX(calc(var(--rx) + 360deg))
+      rotateY(calc(var(--ry) + 360deg))
+      rotateZ(calc(var(--rz) + 180deg));
+  }
+}
+
+.face{
+  position:absolute;
+  inset:0;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.20), rgba(255,255,255,0.03)),
+    hsla(var(--h), 85%, 62%, var(--a));
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow:
+    0 0 22px rgba(255,255,255,0.05),
+    inset 0 0 18px rgba(0,0,0,0.35);
+}
+
+.front  { transform: translateZ(calc(var(--s) / 2)); }
+.back   { transform: rotateY(180deg) translateZ(calc(var(--s) / 2)); }
+.right  { transform: rotateY(90deg)  translateZ(calc(var(--s) / 2)); }
+.left   { transform: rotateY(-90deg) translateZ(calc(var(--s) / 2)); }
+.top    { transform: rotateX(90deg)  translateZ(calc(var(--s) / 2)); }
+.bottom { transform: rotateX(-90deg) translateZ(calc(var(--s) / 2)); }
+
+@media (prefers-reduced-motion: reduce){
+  .cube{ animation: none; }
 }
 
 .wrap{
