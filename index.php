@@ -1965,13 +1965,13 @@
         </div>
 
         <div class="heroLinks" aria-label="Primary navigation">
-          <a href="#">Home</a>
+          <a href="index.php">Home</a>
           <a href="#">Marketing</a>
           <a href="#">Calculator</a>
           <a href="#">Partners</a>
           <a href="#">Statistics</a>
-          <a href="#">FAQ</a>
-          <a href="#">Support</a>
+          <a href="faq.php">FAQ</a>
+          <a href="help-center.php">Support</a>
         </div>
 
         <div class="heroRightNav">
@@ -2456,19 +2456,19 @@
         <div class="footer-column">
           <h3 class="footer-heading">Support</h3>
           <ul class="footer-links">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Help Center</a></li>
+            <li><a href="faq.php">FAQ</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="help-center.php">Help Center</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3 class="footer-heading">Legal</h3>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Compliance</a></li>
+            <li><a href="privacy-policy.php">Privacy Policy</a></li>
+            <li><a href="terms-of-service.php">Terms of Service</a></li>
+            <li><a href="cookie-policy.php">Cookie Policy</a></li>
+            <li><a href="compliance.php">Compliance</a></li>
           </ul>
         </div>
 
