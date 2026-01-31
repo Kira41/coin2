@@ -845,6 +845,69 @@
     }
 
   
+    /* ===== Trading section ===== */
+    .trade{
+      margin-top: 56px;
+    }
+
+    .tradeGrid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .tradeCard{
+      padding: 22px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+
+    .tradeTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: .2px;
+      font-size: clamp(34px, 4.2vw, 52px);
+      line-height: 1.08;
+    }
+
+    .tradeText{
+      margin: 0;
+      color: rgba(233,238,246,0.82);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .tradeList{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display:grid;
+      gap: 12px;
+    }
+
+    .tradeList li{
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 700;
+      color: rgba(233,238,246,0.9);
+    }
+
+    .tradeList span{
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    @media (max-width: 1050px){
+      .tradeGrid{ grid-template-columns: 1fr; }
+    }
+
     /* ===== Wexon statistics section (like screenshot) ===== */
     .stats{
       margin-top: 56px;
@@ -1675,6 +1738,13 @@
       font-weight: 1000;
     }
 
+    .heroCopy{
+      margin: 0 0 14px;
+      color: rgba(233,238,246,0.78);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
     .heroLogos{
       display:flex;
       align-items:center;
@@ -1986,7 +2056,7 @@
 
       <div class="heroMain">
         <div class="heroLeft">
-          <div class="heroKicker"><span class="acc">Innovative</span> cloud mining <span class="acc">system</span></div>
+          <div class="heroKicker"><span class="acc">Innovative</span> cloud mining &amp; trading <span class="acc">system</span></div>
 
           <div class="heroLogos" aria-label="Supported coins">
             <img alt="Bitcoin" loading="lazy" decoding="async" src="https://api.iconify.design/simple-icons:bitcoin.svg?color=%23B8FE08&width=22&height=22">
@@ -1996,7 +2066,9 @@
             <img alt="Solana" loading="lazy" decoding="async" src="https://api.iconify.design/simple-icons:solana.svg?color=%23B8FE08&width=22&height=22">
           </div>
 
-          <h1 class="heroHeadline">Cloud<br/><span class="muted">Mining</span></h1>
+          <h1 class="heroHeadline">Cloud<br/><span class="muted">Mining</span> &amp;<br/><span class="muted">Trading</span></h1>
+
+          <p class="heroCopy">We are an expert company in trading and will help you invest in crypto through both mining and trading.</p>
 
           <div class="heroRow">
             <div class="userChip" role="group" aria-label="Active daily users">
@@ -2260,6 +2332,24 @@
             </table>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="trade" aria-label="Trading">
+      <div class="tradeGrid">
+        <div class="tradeCard glass">
+          <h2 class="tradeTitle">Trading expertise for smarter crypto investing.</h2>
+          <p class="tradeText">We are an expert company in trading and will help you invest money in crypto through mining and trading strategies that fit your goals.</p>
+          <p class="tradeText">From market entry to portfolio growth, we combine analytics, risk management, and real-time insights to keep your investments on track.</p>
+        </div>
+        <div class="tradeCard glass">
+          <h3 class="tradeTitle">Trade support highlights</h3>
+          <ul class="tradeList">
+            <li><span>01</span>Dedicated guidance for spot and long-term crypto trades.</li>
+            <li><span>02</span>Mining-to-trading pathways that help reinvest earnings.</li>
+            <li><span>03</span>Clear insights so you can invest with confidence.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
