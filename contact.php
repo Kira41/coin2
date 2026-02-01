@@ -67,7 +67,7 @@
             </label>
             <label class="form-field">
               Topic
-              <select>
+              <select class="glassy-select">
                 <option>Account &amp; access</option>
                 <option>Deposits &amp; withdrawals</option>
                 <option>Compliance review</option>
