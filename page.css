@@ -454,6 +454,11 @@ a{ color: inherit; text-decoration:none; }
 
 .country-select{
   position: relative;
+  width: 100%;
+}
+
+.country-select input{
+  width: 100%;
 }
 
 .country-options{
