@@ -17,6 +17,7 @@ body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
   color:var(--text);
+  color-scheme: dark;
   background:
     radial-gradient(1200px 700px at 50% -10%, rgba(124,37,239,.25), transparent 55%),
     radial-gradient(900px 600px at 80% 70%, rgba(184,255,0,.12), transparent 60%),
@@ -470,6 +471,10 @@ a{ color: inherit; text-decoration:none; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.form-field select{
+  box-shadow: 0 12px 30px rgba(2,8,18,0.35);
+}
+
 .form-field select option{
   color: #e9eef6;
   background-color: #0b101c;
@@ -488,7 +493,6 @@ a{ color: inherit; text-decoration:none; }
   border-color: rgba(184,255,0,0.6);
   background-color: #0b101c;
   box-shadow:
-    inset 0 0 18px rgba(255,255,255,0.08),
     0 12px 34px rgba(10,18,30,0.45),
     0 0 0 1px rgba(184,255,0,0.25);
 }
