@@ -33,8 +33,8 @@
           <span style="opacity:.9">🌐</span>
           <span>EN</span>
         </div>
-        <button class="pillBtn ghost" type="button">Login</button>
-        <button class="pillBtn" type="button">Sign up</button>
+        <a class="pillBtn ghost" href="login.php">Login</a>
+        <a class="pillBtn" href="signup.php">Sign up</a>
       </div>
     </header>
 

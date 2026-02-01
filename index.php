@@ -1850,6 +1850,10 @@
       user-select:none;
       box-shadow: 0 20px 45px rgba(0,0,0,0.35);
       white-space:nowrap;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
     }
 
     .pillBtn.ghost{
@@ -2214,8 +2218,8 @@
             <span style="opacity:.9">🌐</span>
             <span>EN</span>
           </div>
-          <button class="pillBtn ghost" type="button">Login</button>
-          <button class="pillBtn" type="button">Sign up</button>
+          <a class="pillBtn ghost" href="login.php">Login</a>
+          <a class="pillBtn" href="signup.php">Sign up</a>
         </div>
       </div>
 

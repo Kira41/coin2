@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookie Policy | Coin Trade</title>
+  <title>Login | Coin Trade</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="page.css" />
 </head>
@@ -14,11 +14,11 @@
   <div class="wrap">
     <header class="heroNav">
       <a class="brand" href="index.php" aria-label="wexon">
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/412.png">
-            <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
-          </picture>
-        </a>
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/412.png">
+          <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
+        </picture>
+      </a>
 
       <nav class="heroLinks" aria-label="Primary">
         <a href="index.php">Home</a>
@@ -40,51 +40,67 @@
 
     <section class="page-hero glass">
       <div>
-        <div class="page-breadcrumb">Home / Legal / Cookie Policy</div>
-        <h1 class="page-title">Cookie <span>Policy</span></h1>
-        <p class="page-subtitle">Understand how we use cookies and analytics to deliver a faster, safer Coin Trade experience.</p>
+        <div class="page-breadcrumb">Home / Account / Login</div>
+        <h1 class="page-title">Welcome <span>back</span></h1>
+        <p class="page-subtitle">Sign in to review your mining performance, manage payouts, and monitor live trading insights.</p>
       </div>
       <div class="page-hero-card">
-        <div class="badge"><i class="fa-solid fa-cookie-bite" aria-hidden="true"></i> Cookie controls</div>
-        <h3>Cookie preferences</h3>
-        <p>Manage your cookie settings anytime from your account profile.</p>
+        <div class="badge"><i class="fa-solid fa-shield" aria-hidden="true"></i> Secure access</div>
+        <h3>Protected sessions</h3>
+        <p>We enforce device approvals, live login alerts, and multi-factor security to keep your account safe.</p>
       </div>
     </section>
 
-    <section class="page-section">
-      <h2 class="section-title">Cookie categories</h2>
-      <div class="page-grid">
-        <article class="card">
-          <h4>Essential</h4>
-          <p>Required to authenticate sessions, keep accounts secure, and process orders.</p>
-        </article>
-        <article class="card">
-          <h4>Performance</h4>
-          <p>Analytics cookies help us understand traffic patterns and optimize UX.</p>
-        </article>
-        <article class="card">
-          <h4>Personalization</h4>
-          <p>Remember preferences like language, saved devices, and display settings.</p>
-        </article>
-      </div>
-    </section>
+    <section class="auth-layout">
+      <div class="auth-panel glass">
+        <div>
+          <h2 class="auth-title">Login to your <span>dashboard</span></h2>
+          <p class="auth-subtitle">Use the same credentials you set up during onboarding. Need a new account? You can create one in minutes.</p>
+        </div>
 
-    <section class="page-section">
-      <h2 class="section-title">Managing cookies</h2>
-      <div class="page-grid">
-        <article class="card">
-          <h4>Browser controls</h4>
-          <p>You can delete or block cookies from your browser settings at any time.</p>
-        </article>
-        <article class="card">
-          <h4>Opt-out options</h4>
-          <p>Disable non-essential cookies from your account preferences dashboard.</p>
-        </article>
-        <article class="card">
-          <h4>Third-party partners</h4>
-          <p>We limit partners to vetted analytics vendors with strict data contracts.</p>
-        </article>
+        <form class="auth-form" action="#" method="post">
+          <label class="form-field">
+            Email address
+            <input type="email" name="email" placeholder="you@company.com" required>
+          </label>
+
+          <label class="form-field">
+            Password
+            <input type="password" name="password" placeholder="Enter your password" required>
+          </label>
+
+          <div class="auth-row">
+            <label class="checkbox-row">
+              <input type="checkbox" name="remember" checked>
+              <span>Remember this device</span>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <div class="auth-actions">
+            <button class="primary-btn" type="submit">Access my account</button>
+            <div class="auth-alt">New here? <a href="signup.php">Create a secure account</a></div>
+          </div>
+        </form>
       </div>
+
+      <aside class="auth-side glass">
+        <div class="auth-cta">
+          <div class="badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Real-time access</div>
+          <h3>Everything in one control room</h3>
+          <p class="page-subtitle">Track hashpower plans, automated trading strategies, and ROI forecasts in a single workspace.</p>
+        </div>
+        <ul class="auth-list">
+          <li>Monitor live earnings, payouts, and vault balances.</li>
+          <li>Update compliance documents and security preferences.</li>
+          <li>Activate smart alerts for market movements.</li>
+          <li>Access priority support with verified status.</li>
+        </ul>
+        <div class="card">
+          <h4>Need help signing in?</h4>
+          <p>Visit the <a href="help-center.php">Help Center</a> or reach out to our support desk for recovery support.</p>
+        </div>
+      </aside>
     </section>
 
     <footer class="site-footer glass">
@@ -110,7 +126,7 @@
         <div class="footer-column">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Markets</a></li>
             <li><a href="#">About</a></li>
           </ul>
