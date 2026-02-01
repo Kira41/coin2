@@ -469,6 +469,15 @@ a{ color: inherit; text-decoration:none; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.form-field select option{
+  color: #e9eef6;
+  background-color: #0b101c;
+}
+
+.form-field select option:disabled{
+  color: rgba(233,238,246,0.45);
+}
+
 .form-field textarea{ min-height: 120px; resize: vertical; }
 
 .form-field input:focus,
