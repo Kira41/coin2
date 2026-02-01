@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookie Policy | Coin Trade</title>
+  <title>Sign Up | Coin Trade</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="page.css" />
 </head>
@@ -14,11 +14,11 @@
   <div class="wrap">
     <header class="heroNav">
       <a class="brand" href="index.php" aria-label="wexon">
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/412.png">
-            <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
-          </picture>
-        </a>
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/412.png">
+          <img src="img/700.png" alt="Wexon logo" loading="lazy" decoding="async">
+        </picture>
+      </a>
 
       <nav class="heroLinks" aria-label="Primary">
         <a href="index.php">Home</a>
@@ -40,51 +40,92 @@
 
     <section class="page-hero glass">
       <div>
-        <div class="page-breadcrumb">Home / Legal / Cookie Policy</div>
-        <h1 class="page-title">Cookie <span>Policy</span></h1>
-        <p class="page-subtitle">Understand how we use cookies and analytics to deliver a faster, safer Coin Trade experience.</p>
+        <div class="page-breadcrumb">Home / Account / Sign up</div>
+        <h1 class="page-title">Create your <span>account</span></h1>
+        <p class="page-subtitle">Start trading and mining with trusted compliance tools, market alerts, and a dedicated support team.</p>
       </div>
       <div class="page-hero-card">
-        <div class="badge"><i class="fa-solid fa-cookie-bite" aria-hidden="true"></i> Cookie controls</div>
-        <h3>Cookie preferences</h3>
-        <p>Manage your cookie settings anytime from your account profile.</p>
+        <div class="badge"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Fast onboarding</div>
+        <h3>Go live in minutes</h3>
+        <p>Complete profile details, verify your identity, and connect your payout wallet.</p>
       </div>
     </section>
 
-    <section class="page-section">
-      <h2 class="section-title">Cookie categories</h2>
-      <div class="page-grid">
-        <article class="card">
-          <h4>Essential</h4>
-          <p>Required to authenticate sessions, keep accounts secure, and process orders.</p>
-        </article>
-        <article class="card">
-          <h4>Performance</h4>
-          <p>Analytics cookies help us understand traffic patterns and optimize UX.</p>
-        </article>
-        <article class="card">
-          <h4>Personalization</h4>
-          <p>Remember preferences like language, saved devices, and display settings.</p>
-        </article>
-      </div>
-    </section>
+    <section class="auth-layout">
+      <div class="auth-panel glass">
+        <div>
+          <h2 class="auth-title">Join the <span>Coin Trade</span> network</h2>
+          <p class="auth-subtitle">Create a secure profile to access our mining suites, advanced analytics, and smart trading workflows.</p>
+        </div>
 
-    <section class="page-section">
-      <h2 class="section-title">Managing cookies</h2>
-      <div class="page-grid">
-        <article class="card">
-          <h4>Browser controls</h4>
-          <p>You can delete or block cookies from your browser settings at any time.</p>
-        </article>
-        <article class="card">
-          <h4>Opt-out options</h4>
-          <p>Disable non-essential cookies from your account preferences dashboard.</p>
-        </article>
-        <article class="card">
-          <h4>Third-party partners</h4>
-          <p>We limit partners to vetted analytics vendors with strict data contracts.</p>
-        </article>
+        <form class="auth-form" action="#" method="post">
+          <div class="form-grid">
+            <label class="form-field">
+              First name
+              <input type="text" name="first_name" placeholder="Amelia" required>
+            </label>
+            <label class="form-field">
+              Last name
+              <input type="text" name="last_name" placeholder="Nguyen" required>
+            </label>
+            <label class="form-field">
+              Work email
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </label>
+            <label class="form-field">
+              Country/Region
+              <select name="country" required>
+                <option value="" selected disabled>Select your region</option>
+                <option value="ca">Canada</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="eu">European Union</option>
+                <option value="apac">APAC</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-field">
+            Create password
+            <input type="password" name="password" placeholder="Use 10+ characters" required>
+          </label>
+
+          <label class="form-field">
+            Confirm password
+            <input type="password" name="confirm_password" placeholder="Re-enter password" required>
+          </label>
+
+          <div class="auth-row">
+            <label class="checkbox-row">
+              <input type="checkbox" name="terms" required>
+              <span>I agree to the Terms of Service and Privacy Policy.</span>
+            </label>
+          </div>
+
+          <div class="auth-actions">
+            <button class="primary-btn" type="submit">Create my account</button>
+            <div class="auth-alt">Already have access? <a href="login.php">Log in here</a></div>
+          </div>
+        </form>
       </div>
+
+      <aside class="auth-side glass">
+        <div class="auth-cta">
+          <div class="badge"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Built for growth</div>
+          <h3>Unlock premium analytics</h3>
+          <p class="page-subtitle">Gain daily ROI projections, live risk tracking, and proactive alerts from the moment you sign up.</p>
+        </div>
+        <ul class="auth-list">
+          <li>Instant access to mining plans and trading bots.</li>
+          <li>Dedicated compliance guidance for new accounts.</li>
+          <li>Personalized alerts for portfolio milestones.</li>
+          <li>Priority onboarding sessions with our experts.</li>
+        </ul>
+        <div class="card">
+          <h4>Questions before joining?</h4>
+          <p>Review our <a href="faq.php">FAQ</a> or connect with the <a href="contact.php">support team</a> for guidance.</p>
+        </div>
+      </aside>
     </section>
 
     <footer class="site-footer glass">
@@ -110,7 +151,7 @@
         <div class="footer-column">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Markets</a></li>
             <li><a href="#">About</a></li>
           </ul>
