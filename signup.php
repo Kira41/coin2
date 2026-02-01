@@ -74,7 +74,7 @@
             </label>
             <label class="form-field">
               Country/Region
-              <select name="country" required>
+              <select class="glassy-select" name="country" required>
                 <option value="" selected disabled>Select your region</option>
                 <option value="ca">Canada</option>
                 <option value="us">United States</option>

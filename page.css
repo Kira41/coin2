@@ -475,6 +475,23 @@ a{ color: inherit; text-decoration:none; }
   box-shadow: 0 12px 30px rgba(2,8,18,0.35);
 }
 
+.form-field select.glassy-select{
+  border-color: rgba(255,255,255,0.35);
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  box-shadow:
+    inset 0 0 18px rgba(255,255,255,0.12),
+    0 16px 38px rgba(2,8,18,0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.form-field select.glassy-select:focus{
+  border-color: rgba(184,255,0,0.7);
+  box-shadow:
+    0 16px 38px rgba(10,18,30,0.5),
+    0 0 0 1px rgba(184,255,0,0.35);
+}
+
 .form-field select option{
   color: #e9eef6;
   background-color: #0b101c;
