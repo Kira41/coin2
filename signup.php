@@ -74,29 +74,10 @@
             </label>
             <label class="form-field">
               Country/Region
-              <input type="text" name="country" list="country-list" placeholder="Start typing a country" required>
-              <datalist id="country-list">
-                <option value="Canada"></option>
-                <option value="United States"></option>
-                <option value="United Kingdom"></option>
-                <option value="Australia"></option>
-                <option value="New Zealand"></option>
-                <option value="Germany"></option>
-                <option value="France"></option>
-                <option value="Spain"></option>
-                <option value="Italy"></option>
-                <option value="Netherlands"></option>
-                <option value="Sweden"></option>
-                <option value="Norway"></option>
-                <option value="Switzerland"></option>
-                <option value="Brazil"></option>
-                <option value="Mexico"></option>
-                <option value="Japan"></option>
-                <option value="Singapore"></option>
-                <option value="India"></option>
-                <option value="United Arab Emirates"></option>
-                <option value="South Africa"></option>
-              </datalist>
+              <div class="country-select">
+                <input type="text" name="country" placeholder="Start typing a country" autocomplete="off" required aria-autocomplete="list" aria-controls="country-options">
+                <div class="country-options" id="country-options" role="listbox" aria-label="Country list"></div>
+              </div>
             </label>
           </div>
 
@@ -215,5 +196,118 @@
     </footer>
   </div>
   <script src="page-bg.js"></script>
+  <script>
+    const countryInput = document.querySelector('input[name="country"]');
+    const countryOptions = document.getElementById('country-options');
+    const countries = [
+      'Canada',
+      'United States',
+      'United Kingdom',
+      'Australia',
+      'New Zealand',
+      'Germany',
+      'France',
+      'Spain',
+      'Italy',
+      'Netherlands',
+      'Sweden',
+      'Norway',
+      'Switzerland',
+      'Brazil',
+      'Mexico',
+      'Japan',
+      'Singapore',
+      'India',
+      'United Arab Emirates',
+      'South Africa'
+    ];
+    let activeIndex = -1;
+
+    const closeList = () => {
+      countryOptions.classList.remove('show');
+      activeIndex = -1;
+      updateActiveOption();
+    };
+
+    const updateActiveOption = () => {
+      const options = [...countryOptions.querySelectorAll('.country-option')];
+      options.forEach((option, index) => {
+        option.classList.toggle('active', index === activeIndex);
+      });
+    };
+
+    const buildOptions = (query) => {
+      const lowerQuery = query.trim().toLowerCase();
+      const matches = countries.filter((country) =>
+        country.toLowerCase().includes(lowerQuery)
+      );
+      countryOptions.innerHTML = '';
+
+      matches.forEach((country, index) => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'country-option';
+        option.role = 'option';
+        option.textContent = country;
+        option.addEventListener('click', () => {
+          countryInput.value = country;
+          closeList();
+        });
+        option.addEventListener('mousemove', () => {
+          activeIndex = index;
+          updateActiveOption();
+        });
+        countryOptions.appendChild(option);
+      });
+
+      if (matches.length) {
+        countryOptions.classList.add('show');
+      } else {
+        closeList();
+      }
+    };
+
+    countryInput.addEventListener('input', (event) => {
+      buildOptions(event.target.value);
+    });
+
+    countryInput.addEventListener('focus', () => {
+      buildOptions(countryInput.value || '');
+    });
+
+    countryInput.addEventListener('keydown', (event) => {
+      const options = [...countryOptions.querySelectorAll('.country-option')];
+      if (!options.length) {
+        return;
+      }
+
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        activeIndex = (activeIndex + 1) % options.length;
+        updateActiveOption();
+        options[activeIndex].scrollIntoView({ block: 'nearest' });
+      }
+
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        activeIndex = (activeIndex - 1 + options.length) % options.length;
+        updateActiveOption();
+        options[activeIndex].scrollIntoView({ block: 'nearest' });
+      }
+
+      if (event.key === 'Enter' && activeIndex >= 0) {
+        event.preventDefault();
+        options[activeIndex].click();
+      }
+
+      if (event.key === 'Escape') {
+        closeList();
+      }
+    });
+
+    countryInput.addEventListener('blur', () => {
+      setTimeout(closeList, 120);
+    });
+  </script>
 </body>
 </html>
