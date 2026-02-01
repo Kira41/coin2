@@ -25,7 +25,7 @@
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%;scroll-behavior:smooth}
     body{
       position:relative;
       margin:0;
@@ -2194,7 +2194,7 @@
   </div>
   <div class="wrap">
     <!-- Hero section (uses img/bg.png) -->
-    <section class="hero" aria-label="Hero">
+    <section class="hero" aria-label="Hero" id="top">
       <div class="heroNav">
         <a class="brand" href="index.php" aria-label="wexon">
           <picture>
@@ -2204,11 +2204,11 @@
         </a>
 
         <div class="heroLinks" aria-label="Primary navigation">
-          <a href="index.php">Home</a>
-          <a href="#">Marketing</a>
-          <a href="#">Calculator</a>
-          <a href="#">Partners</a>
-          <a href="#">Statistics</a>
+          <a href="index.php#top">Home</a>
+          <a href="#marketing">Marketing</a>
+          <a href="#calculator">Calculator</a>
+          <a href="#partners">Partners</a>
+          <a href="#statistics">Statistics</a>
           <a href="faq.php">FAQ</a>
           <a href="help-center.php">Support</a>
         </div>
@@ -2278,9 +2278,10 @@
       </div>
     </section>
 
-    <h1 class="title reveal reveal-up">Mining <span class="accent">calculator</span>.</h1>
+    <section class="calculatorSection" id="calculator" aria-label="Mining calculator">
+      <h1 class="title reveal reveal-up">Mining <span class="accent">calculator</span>.</h1>
 
-    <div class="layout">
+      <div class="layout">
       <!-- LEFT -->
       <aside class="side glass reveal reveal-left">
         <div class="centerTitle">Investment currency</div>
@@ -2438,10 +2439,11 @@
         <input id="daysRange" type="range" min="0" max="365" value="131" />
         <div class="arc right"></div>
       </aside>
-    </div>
+      </div>
+    </section>
 
     <!-- Marketing section (like screenshot) -->
-    <section class="marketing" aria-label="Marketing">
+    <section class="marketing" id="marketing" aria-label="Marketing">
       <h2 class="mkTitle reveal reveal-up">Marketing</h2>
 
       <div class="mkGrid">
@@ -2574,7 +2576,7 @@
     </section>
 
     <!-- Wexon statistics section (like screenshot) -->
-    <section class="stats" aria-label="Wexon statistics">
+    <section class="stats" id="statistics" aria-label="Wexon statistics">
       <div class="statsHeader reveal reveal-up">
         <h2 class="statsTitle"><span class="w">Wexon</span> <span class="s">statistics</span></h2>
         <div class="growCallout" aria-label="We are growing">
@@ -2686,7 +2688,7 @@
     </section>
 
     <!-- Affiliate section (like screenshot) -->
-    <section class="affiliate" aria-label="Affiliate program">
+    <section class="affiliate" id="partners" aria-label="Affiliate program">
       <div class="affTopBar reveal reveal-up">
         <h2 class="statsTitle"><span class="w">Affiliate</span> <span class="s">program</span></h2>
       </div>
