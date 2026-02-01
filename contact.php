@@ -67,12 +67,10 @@
             </label>
             <label class="form-field">
               Topic
-              <select class="glassy-select">
-                <option>Account &amp; access</option>
-                <option>Deposits &amp; withdrawals</option>
-                <option>Compliance review</option>
-                <option>Partnership inquiry</option>
-              </select>
+              <div class="country-select">
+                <input type="text" name="topic" placeholder="Choose a topic" autocomplete="off" aria-autocomplete="list" aria-controls="topic-options" />
+                <div class="country-options" id="topic-options" role="listbox" aria-label="Topic list"></div>
+              </div>
             </label>
           </div>
           <label class="form-field" style="margin-top:14px;">
@@ -176,5 +174,102 @@
     </footer>
   </div>
   <script src="page-bg.js"></script>
+  <script>
+    const topicInput = document.querySelector('input[name="topic"]');
+    const topicOptions = document.getElementById('topic-options');
+    const topics = [
+      'Account & access',
+      'Deposits & withdrawals',
+      'Compliance review',
+      'Partnership inquiry'
+    ];
+    let activeTopicIndex = -1;
+
+    const closeTopicList = () => {
+      topicOptions.classList.remove('show');
+      activeTopicIndex = -1;
+      updateActiveTopic();
+    };
+
+    const updateActiveTopic = () => {
+      const options = [...topicOptions.querySelectorAll('.country-option')];
+      options.forEach((option, index) => {
+        option.classList.toggle('active', index === activeTopicIndex);
+      });
+    };
+
+    const buildTopicOptions = (query) => {
+      const lowerQuery = query.trim().toLowerCase();
+      const matches = topics.filter((topic) =>
+        topic.toLowerCase().includes(lowerQuery)
+      );
+      topicOptions.innerHTML = '';
+
+      matches.forEach((topic, index) => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'country-option';
+        option.role = 'option';
+        option.textContent = topic;
+        option.addEventListener('click', () => {
+          topicInput.value = topic;
+          closeTopicList();
+        });
+        option.addEventListener('mousemove', () => {
+          activeTopicIndex = index;
+          updateActiveTopic();
+        });
+        topicOptions.appendChild(option);
+      });
+
+      if (matches.length) {
+        topicOptions.classList.add('show');
+      } else {
+        closeTopicList();
+      }
+    };
+
+    topicInput.addEventListener('input', (event) => {
+      buildTopicOptions(event.target.value);
+    });
+
+    topicInput.addEventListener('focus', () => {
+      buildTopicOptions(topicInput.value || '');
+    });
+
+    topicInput.addEventListener('keydown', (event) => {
+      const options = [...topicOptions.querySelectorAll('.country-option')];
+      if (!options.length) {
+        return;
+      }
+
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        activeTopicIndex = (activeTopicIndex + 1) % options.length;
+        updateActiveTopic();
+        options[activeTopicIndex].scrollIntoView({ block: 'nearest' });
+      }
+
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        activeTopicIndex = (activeTopicIndex - 1 + options.length) % options.length;
+        updateActiveTopic();
+        options[activeTopicIndex].scrollIntoView({ block: 'nearest' });
+      }
+
+      if (event.key === 'Enter' && activeTopicIndex >= 0) {
+        event.preventDefault();
+        options[activeTopicIndex].click();
+      }
+
+      if (event.key === 'Escape') {
+        closeTopicList();
+      }
+    });
+
+    topicInput.addEventListener('blur', () => {
+      setTimeout(closeTopicList, 120);
+    });
+  </script>
 </body>
 </html>
