@@ -74,14 +74,29 @@
             </label>
             <label class="form-field">
               Country/Region
-              <select class="glassy-select" name="country" required>
-                <option value="" selected disabled>Select your region</option>
-                <option value="ca">Canada</option>
-                <option value="us">United States</option>
-                <option value="gb">United Kingdom</option>
-                <option value="eu">European Union</option>
-                <option value="apac">APAC</option>
-              </select>
+              <input type="text" name="country" list="country-list" placeholder="Start typing a country" required>
+              <datalist id="country-list">
+                <option value="Canada"></option>
+                <option value="United States"></option>
+                <option value="United Kingdom"></option>
+                <option value="Australia"></option>
+                <option value="New Zealand"></option>
+                <option value="Germany"></option>
+                <option value="France"></option>
+                <option value="Spain"></option>
+                <option value="Italy"></option>
+                <option value="Netherlands"></option>
+                <option value="Sweden"></option>
+                <option value="Norway"></option>
+                <option value="Switzerland"></option>
+                <option value="Brazil"></option>
+                <option value="Mexico"></option>
+                <option value="Japan"></option>
+                <option value="Singapore"></option>
+                <option value="India"></option>
+                <option value="United Arab Emirates"></option>
+                <option value="South Africa"></option>
+              </datalist>
             </label>
           </div>
 
